@@ -1,7 +1,7 @@
 title: "Marie Caboche — Portfolio"
 description: "Portfolio créatif de Marie Caboche"
-url: ""
-baseurl: ""
+url: "https://marie04caboche-source.github.io"
+baseurl: "/portfolio"
 markdown: kramdown
 permalink: pretty
 collections:
