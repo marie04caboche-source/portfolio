@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<main class="project-detail">
+  <div class="detail-top"><a href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a><span>{{ page.year }} / {{ page.category }}</span></div>
+  <section class="detail-hero">
+    <p class="eyebrow">ÉTUDE DE PROJET — {{ page.year }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.cover %}<img class="detail-cover" src="{{ page.cover | relative_url }}" alt="{{ page.title | escape }}">{% endif %}
+    <p class="detail-summary">{{ page.summary }}</p>
+  </section>
+  <section class="detail-info">
+    <div><small>MON RÔLE</small><p>{{ page.role }}</p></div>
+    <div><small>OUTILS & COMPÉTENCES</small><p>{{ page.tools }}</p></div>
+  </section>
+  <article class="detail-body">{{ content }}</article>
+  <a class="back-projects" href="{{ '/' | relative_url }}#projets">← DÉCOUVRIR LES AUTRES PROJETS</a>
+</main>

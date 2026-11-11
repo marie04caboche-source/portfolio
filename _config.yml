@@ -1,0 +1,16 @@
+title: "Marie Caboche — Portfolio"
+description: "Portfolio créatif de Marie Caboche"
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+collections:
+  projects:
+    output: true
+    permalink: /projets/:name/
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
