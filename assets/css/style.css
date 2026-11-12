@@ -1939,3 +1939,14 @@ a.project-card:focus-visible .home-case-art:before{
  .crous-hero:before,.crous-orbit-one,.crous-orbit-two,.crous-sunburst,.crous-stamp{animation:none!important}
  .crous-poster,.crous-mission-card{transition:none!important}
 }
+
+/* CROUS home project card */
+.home-crous-art{position:absolute;inset:0;padding:22px 7%;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:radial-gradient(circle at 82% 24%,#f7d94c 0 8%,transparent 8.5%),linear-gradient(125deg,#38233d,#a94455 58%,#ff7048);color:#fff4e7}
+.home-crous-art:before{content:"";position:absolute;width:75%;aspect-ratio:1;border:1px solid #ffffff65;border-radius:50%;right:-28%;bottom:-54%;box-shadow:0 0 0 20px #ffffff12,0 0 0 50px #ffffff0c}
+.home-crous-top,.home-crous-bottom{position:relative;z-index:2;display:flex;justify-content:space-between;gap:10px;font:8px var(--mono);letter-spacing:.1em}
+.home-crous-title{position:relative;z-index:2;font-size:clamp(30px,5.4vw,72px);font-weight:950;line-height:.82;letter-spacing:-.09em}
+.home-crous-title em{font-style:normal;color:#f7d94c;text-shadow:2px 2px 0 #211d28}
+.home-crous-star{position:absolute;right:12%;top:18%;font-size:clamp(75px,12vw,150px);line-height:1;color:#ff9c86;text-shadow:4px 4px 0 #f7d94c;transition:transform .8s}
+.project-card:hover .home-crous-star{transform:rotate(70deg) scale(1.2)}
+.home-crous-bottom{border-top:1px solid #ffffff65;padding-top:10px}
+@media(max-width:700px){.home-crous-art{padding:18px 6%}.home-crous-title{font-size:clamp(40px,12vw,62px)}.home-crous-top,.home-crous-bottom{font-size:7px}}
