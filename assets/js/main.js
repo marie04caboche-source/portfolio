@@ -178,4 +178,37 @@
     renderGallery();
   }
 
+
+  // TIAM: pointer-driven ball depth and scroll-reactive speed lines.
+  const tiamPage = document.querySelector(".tiam-world");
+  if (tiamPage && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    let tiamFrame = null;
+    const updateTiamScroll = () => {
+      const rect = tiamPage.getBoundingClientRect();
+      const distance = Math.max(1, tiamPage.offsetHeight - window.innerHeight);
+      const progress = Math.min(1, Math.max(0, -rect.top / distance));
+      tiamPage.style.setProperty("--tiam-scroll", progress.toFixed(3));
+    };
+    window.addEventListener("scroll", updateTiamScroll, {passive:true});
+    window.addEventListener("resize", updateTiamScroll);
+    updateTiamScroll();
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      const art = tiamPage.querySelector(".tiam-hero-art");
+      art?.addEventListener("pointermove", (event) => {
+        if (tiamFrame) cancelAnimationFrame(tiamFrame);
+        tiamFrame = requestAnimationFrame(() => {
+          const rect = art.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width - .5;
+          const y = (event.clientY - rect.top) / rect.height - .5;
+          tiamPage.style.setProperty("--tiam-x", (x * 24).toFixed(1) + "px");
+          tiamPage.style.setProperty("--tiam-y", (y * 24).toFixed(1) + "px");
+        });
+      });
+      art?.addEventListener("pointerleave", () => {
+        tiamPage.style.setProperty("--tiam-x", "0px");
+        tiamPage.style.setProperty("--tiam-y", "0px");
+      });
+    }
+  }
+
 })();
