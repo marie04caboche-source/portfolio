@@ -1053,3 +1053,43 @@ body:has(.assises-world) .nav-availability i { background: var(--a-lime); box-sh
   .home-case-orbit{width:38%;right:5%;top:25%}
   .home-case-orbit span{width:36px;height:36px;font-size:19px}
 }
+
+
+/* ASSISES — immersive renewable-energy scene */
+.assises-world { --sun-x:88%; --sun-y:5%; --daylight:0; }
+.assises-world .energy-scene { position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;opacity:.92; }
+.assises-world .energy-path { position:absolute;inset:0;width:100%;height:100%;opacity:.42; }
+.assises-world .energy-path path { fill:none;stroke:var(--a-lime);stroke-width:1.5;stroke-dasharray:5 12;vector-effect:non-scaling-stroke;opacity:.48; }
+.assises-world .energy-sun { position:absolute;left:var(--sun-x);top:var(--sun-y);width:clamp(42px,6vw,82px);aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 38% 35%,#fff8bf 0 8%,#d8f36d 20%,#8bdc68 52%,rgba(22,184,176,.12) 72%);box-shadow:0 0 24px rgba(200,238,85,.5),0 0 70px rgba(200,238,85,.28),0 0 150px rgba(22,184,176,.17); }
+.assises-world .energy-sun:before,.assises-world .energy-sun:after { content:"";position:absolute;inset:-20%;border:1px solid rgba(200,238,85,.38);border-radius:50%; }
+.assises-world .energy-sun:after { inset:-42%;border-color:rgba(22,184,176,.22); }
+.assises-world .energy-sun span { position:absolute;inset:20%;border:1px solid rgba(255,255,255,.55);border-radius:50%; }
+.assises-world .energy-turbine { position:absolute;right:7%;top:31%;width:clamp(64px,9vw,118px);height:clamp(145px,19vw,245px);opacity:.78;filter:drop-shadow(0 0 18px rgba(22,184,176,.2)); }
+.assises-world .turbine-mast { position:absolute;left:50%;top:12%;height:88%;width:2px;background:linear-gradient(#eff4e8,rgba(22,184,176,.18));transform:translateX(-50%); }
+.assises-world .turbine-mast:after { content:"";position:absolute;bottom:0;left:-13px;width:28px;height:5px;background:var(--a-cyan);border-radius:50%; }
+.assises-world .turbine-hub { position:absolute;left:50%;top:10%;width:10px;height:10px;border-radius:50%;background:var(--a-lime);transform:translate(-50%,-50%);z-index:2;box-shadow:0 0 14px var(--a-lime); }
+.assises-world .turbine-blades { position:absolute;left:50%;top:10%;width:0;height:0;z-index:1;animation:turbine-spin 8s linear infinite; }
+.assises-world .turbine-blades i { position:absolute;left:-3px;top:-4px;width:6px;height:clamp(45px,6vw,75px);border-radius:100% 100% 5px 5px;background:linear-gradient(to top,var(--a-cyan),rgba(239,244,232,.9));transform-origin:50% 4px;clip-path:polygon(50% 0,100% 100%,50% 88%,0 100%); }
+.assises-world .turbine-blades i:nth-child(2) { transform:rotate(120deg); }
+.assises-world .turbine-blades i:nth-child(3) { transform:rotate(240deg); }
+@keyframes turbine-spin { to { transform:rotate(360deg); } }
+.assises-world .energy-panels { position:absolute;left:7%;top:78%;width:clamp(190px,29vw,370px);display:flex;gap:7px;transform:perspective(500px) rotateX(12deg) rotateZ(-7deg);opacity:.8; }
+.assises-world .solar-panel { flex:1;display:grid;grid-template-columns:repeat(2,1fr);gap:3px;padding:5px;border:1px solid rgba(200,238,85,.55);background:rgba(4,42,54,.76);box-shadow:0 0 0 1px rgba(22,184,176,.15),inset 0 0 18px rgba(22,184,176,.12);transform:skewY(-4deg); }
+.assises-world .solar-panel i { display:block;min-height:19px;background:linear-gradient(135deg,rgba(22,184,176,.12),rgba(7,91,112,.5));border:1px solid rgba(22,184,176,.22);transition:background .7s ease,box-shadow .7s ease,border-color .7s ease; }
+.assises-world .solar-panel i.is-lit { background:linear-gradient(135deg,rgba(239,255,174,.95),rgba(114,201,75,.72) 45%,rgba(22,184,176,.72));border-color:rgba(239,255,174,.8);box-shadow:0 0 12px rgba(200,238,85,.48),inset 0 0 8px rgba(255,255,255,.38); }
+.assises-world .energy-flow { position:absolute;width:38vw;height:1px;left:22%;top:53%;background:linear-gradient(90deg,transparent,var(--a-cyan),var(--a-lime),transparent);opacity:.38;transform:rotate(-22deg);transform-origin:left; }
+.assises-world .energy-flow:after { content:"";position:absolute;inset:-3px 0;background:repeating-linear-gradient(90deg,transparent 0 24px,rgba(239,255,174,.9) 25px 27px,transparent 28px 50px);animation:energy-current 5s linear infinite; }
+.assises-world .energy-flow-two { left:48%;top:67%;width:28vw;transform:rotate(18deg);opacity:.22; }
+@keyframes energy-current { to { background-position:100px 0; } }
+.assises-world:before { background:radial-gradient(ellipse at var(--sun-x) var(--sun-y),rgba(200,238,85,calc(.04 + var(--daylight)*.12)),transparent 24%),repeating-linear-gradient(135deg,transparent 0 42px,rgba(200,238,85,.075) 43px 44px,transparent 45px 88px),radial-gradient(circle at 18% 24%,transparent 0 62px,rgba(22,184,176,.22) 63px 64px,transparent 65px 92px,rgba(22,184,176,.12) 93px 94px,transparent 95px),radial-gradient(circle at 91% 62%,transparent 0 95px,rgba(200,238,85,.2) 96px 97px,transparent 98px 132px,rgba(200,238,85,.12) 133px 134px,transparent 135px); }
+.assises-world > :not(.energy-scene) { position:relative;z-index:1; }
+.assises-world .energy-scene { z-index:0; }
+.assises-world .detail-body h2 { transition:color .5s ease,text-shadow .5s ease; }
+.assises-world .detail-body h2.is-lit { color:#e4ff8a;text-shadow:0 0 22px rgba(200,238,85,.18); }
+@media(max-width:700px) {
+ .assises-world .energy-turbine { right:2%;top:35%;opacity:.5;width:54px;height:130px; }
+ .assises-world .energy-panels { left:3%;top:88%;width:58vw;opacity:.62; }
+ .assises-world .energy-sun { width:42px; }
+ .assises-world .energy-flow { width:65vw;left:5%;top:58%; }
+}
+@media(prefers-reduced-motion:reduce) { .assises-world .turbine-blades,.assises-world .energy-flow:after { animation:none!important; } }
