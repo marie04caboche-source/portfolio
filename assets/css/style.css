@@ -1188,3 +1188,47 @@ body:has(.assises-world) .nav-availability i { background: var(--a-lime); box-sh
 .creative-slide-caption strong{font-size:15px}
 }
 @media(prefers-reduced-motion:reduce){.creative-gallery:before,.creative-gallery:after,.creative-art-cross{animation:none!important}.creative-slide,.art-orbit,.art-disc,.creative-progress i{transition:none!important}}
+
+
+/* Assises energy scene — stronger scroll-reactive daylight, with clear reading zones */
+.assises-world {
+  background:
+    radial-gradient(ellipse at var(--sun-x,50%) var(--sun-y,8%), rgba(200,238,85,var(--sun-glow,.12)), transparent 25%),
+    radial-gradient(ellipse at calc(100% - var(--sun-x,50%)) calc(100% - var(--sun-y,8%)), rgba(22,184,176,var(--ambient-glow,.2)), transparent 42%),
+    linear-gradient(135deg, #062f35 0%, #074b59 48%, #06353e 100%);
+  transition:background 1.2s ease;
+}
+.assises-world:before {
+  opacity:calc(.55 + var(--daylight,0) * .25);
+  background:
+    repeating-linear-gradient(135deg, transparent 0 42px, rgba(200,238,85,calc(.045 + var(--daylight,0) * .055)) 43px 44px, transparent 45px 88px),
+    radial-gradient(circle at 18% 24%, transparent 0 62px, rgba(22,184,176,.22) 63px 64px, transparent 65px 92px, rgba(22,184,176,.12) 93px 94px, transparent 95px),
+    radial-gradient(circle at 91% 62%, transparent 0 95px, rgba(200,238,85,calc(.12 + var(--daylight,0) * .12)) 96px 97px, transparent 98px 132px, rgba(200,238,85,.12) 133px 134px, transparent 135px);
+  background-size:auto,520px 520px,680px 680px;
+}
+.assises-world .energy-scene:before {
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(circle at var(--sun-x,50%) var(--sun-y,8%), rgba(255,245,174,var(--sun-glow,.14)) 0, rgba(200,238,85,calc(var(--sun-glow,.14) * .58)) 8%, rgba(22,184,176,.08) 18%, transparent 34%),
+    linear-gradient(115deg,rgba(200,238,85,calc(var(--daylight,0) * .035)),transparent 38%,rgba(22,184,176,calc(var(--daylight,0) * .09)));
+  mix-blend-mode:screen;transition:opacity .5s ease;
+}
+.assises-world .energy-sun {
+  width:clamp(38px,5.2vw,70px);
+  opacity:var(--sun-opacity, .88);
+  filter:blur(var(--sun-softness,0px));
+  background:radial-gradient(circle at 38% 35%,#fffbdc 0 7%,#e5f88a 19%,#9be36c 47%,rgba(22,184,176,.08) 74%);
+  box-shadow:0 0 18px rgba(200,238,85,.4),0 0 52px rgba(200,238,85,.22),0 0 115px rgba(22,184,176,.13);
+  transition:opacity .45s ease,filter .45s ease,box-shadow .8s ease;
+}
+.assises-world .energy-sun:before,.assises-world .energy-sun:after { opacity:var(--sun-ring-opacity,.65);transition:opacity .4s ease; }
+.assises-world .energy-sun.is-behind-copy { opacity:.16;filter:blur(5px); }
+.assises-world .energy-panels { left:auto;right:3.5%;top:79%;width:clamp(175px,25vw,320px);opacity:.68; }
+.assises-world .energy-flow { opacity:calc(.22 + var(--daylight,0) * .24);filter:drop-shadow(0 0 8px rgba(200,238,85,.32)); }
+.assises-world .energy-flow-two { opacity:calc(.12 + var(--daylight,0) * .2); }
+.assises-world .detail-hero:before { border-color:rgba(22,184,176,calc(.28 + var(--daylight,0) * .24));box-shadow:0 0 0 24px rgba(22,184,176,.07),0 0 0 52px rgba(200,238,85,calc(.035 + var(--daylight,0) * .055)),0 0 0 88px rgba(22,184,176,.04); }
+.assises-world .detail-body h2.is-lit { color:#efffa8;text-shadow:0 0 28px rgba(200,238,85,.3),0 0 65px rgba(22,184,176,.18); }
+@media(max-width:700px) {
+ .assises-world .energy-panels { right:1%;left:auto;top:89%;width:55vw;opacity:.48; }
+ .assises-world .energy-sun { width:38px; }
+}
