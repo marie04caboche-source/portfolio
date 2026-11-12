@@ -1093,3 +1093,22 @@ body:has(.assises-world) .nav-availability i { background: var(--a-lime); box-sh
  .assises-world .energy-flow { width:65vw;left:5%;top:58%; }
 }
 @media(prefers-reduced-motion:reduce) { .assises-world .turbine-blades,.assises-world .energy-flow:after { animation:none!important; } }
+
+/* Assises card: use the exact same hover motion as the other project visuals */
+.project-card:hover .home-case-art:before {
+  transform: scale(1.2) rotate(20deg);
+}
+.project-card .home-case-art .home-case-orbit {
+  transition: transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.project-card:hover .home-case-art .home-case-orbit {
+  transform: scale(1.2) rotate(20deg);
+}
+.project-card .home-case-art .home-case-orbit span {
+  transition: transform .35s ease, background .35s ease, color .35s ease;
+}
+.project-card:hover .home-case-art .home-case-orbit span {
+  transform: translate(5px,-5px) rotate(25deg);
+  background: var(--pink);
+  color: var(--ink);
+}
