@@ -102,6 +102,7 @@ layout: default
     </div>
     <div class="tiam-hero-art" aria-hidden="true">
       <div class="tiam-speed-rings"></div>
+      <div class="tiam-ball" aria-hidden="true"><span></span><i></i></div>
       <div class="tiam-stamp tiam-stamp-one">18<small>TH</small></div>
       <div class="tiam-stamp tiam-stamp-two">19<small>TH</small></div>
       <div class="tiam-art-label">PLAY<br>LOUD.</div>
@@ -111,7 +112,10 @@ layout: default
   </section>
 
   <div class="tiam-international" aria-label="Dimension internationale du tournoi">
-    <div class="tiam-international-track"><span>ONE COURT, MANY CULTURES</span><b>✳</b><span>BÉNIN</span><b>✳</b><span>ESPAGNE</span><b>✳</b><span>POLOGNE</span><b>✳</b><span>BELGIQUE</span><b>✳</b><span>ONE COURT, MANY CULTURES</span><b>✳</b><span>BÉNIN</span><b>✳</b><span>ESPAGNE</span><b>✳</b><span>POLOGNE</span><b>✳</b><span>BELGIQUE</span><b>✳</b></div>
+    <div class="tiam-international-track">
+      <div class="tiam-international-group"><span>ONE COURT, MANY CULTURES</span><b>✳</b><span>BÉNIN</span><b>✳</b><span>ESPAGNE</span><b>✳</b><span>POLOGNE</span><b>✳</b><span>BELGIQUE</span><b>✳</b><span>FRANCE</span><b>✳</b></div>
+      <div class="tiam-international-group" aria-hidden="true"><span>ONE COURT, MANY CULTURES</span><b>✳</b><span>BÉNIN</span><b>✳</b><span>ESPAGNE</span><b>✳</b><span>POLOGNE</span><b>✳</b><span>BELGIQUE</span><b>✳</b><span>FRANCE</span><b>✳</b></div>
+    </div>
   </div>
 
   <section class="tiam-worldwide">
@@ -128,6 +132,7 @@ layout: default
         <span data-country="02">ESPAGNE</span>
         <span data-country="03">POLOGNE</span>
         <span data-country="04">BELGIQUE</span>
+        <span data-country="05">FRANCE</span>
       </div>
       <span class="tiam-country-end">AND MORE ON THE COURT ↗</span>
     </div>
@@ -175,8 +180,13 @@ layout: default
   </section>
 
   <footer class="tiam-footer">
-    <span>TIAM — BASKETBALL / 18e & 19e ÉDITIONS</span>
-    <a href="{{ '/' | relative_url }}#projets">RETOUR AUX PROJETS ↑</a>
+    <div class="tiam-footer-top"><span>FINAL BUZZER / TIAM BASKETBALL</span><span>18e & 19e ÉDITIONS · KEEP THE GAME MOVING</span></div>
+    <div class="tiam-footer-lockup">
+      <strong class="tiam-footer-mc" aria-label="Marie Caboche">MC</strong>
+      <div class="tiam-footer-court" aria-hidden="true"><i></i><b></b></div>
+      <div class="tiam-footer-title"><span>VISUAL IDENTITY / SPORT & CULTURE</span><strong>THE GAME<br><em>GOES ON.</em></strong></div>
+      <a href="{{ '/' | relative_url }}#projets">RETOUR AUX PROJETS <b>↗</b></a>
+    </div>
   </footer>
 </main>
 {% else %}
