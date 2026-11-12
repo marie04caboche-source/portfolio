@@ -60,25 +60,42 @@
   }
 
 
-  // Assises: the sun follows the reading progress and progressively powers the solar panels.
+  // Assises: the sun travels from sunrise to sunset, animating the atmosphere while fading behind copy.
   const energyPage = document.querySelector(".assises-world");
   if (energyPage && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const panels = [...energyPage.querySelectorAll(".solar-panel i")];
     const headings = [...energyPage.querySelectorAll(".detail-body h2")];
+    const sun = energyPage.querySelector(".energy-sun");
     let ticking = false;
     const updateEnergyScene = () => {
       const rect = energyPage.getBoundingClientRect();
       const scrollable = Math.max(1, energyPage.offsetHeight - window.innerHeight);
       const progress = Math.min(1, Math.max(0, -rect.top / scrollable));
-      const x = 88 - Math.sin(progress * Math.PI) * 34;
-      const y = 4 + progress * 91;
+      const x = 10 + Math.sin(progress * Math.PI) * 80;
+      const y = 3 + progress * 94;
+      const daylight = Math.max(0, Math.sin(progress * Math.PI));
+      const glow = .08 + daylight * .2;
       energyPage.style.setProperty("--sun-x", x.toFixed(2) + "%");
       energyPage.style.setProperty("--sun-y", y.toFixed(2) + "%");
-      const light = Math.max(0, Math.min(1, (progress - .48) / .34));
-      energyPage.style.setProperty("--daylight", light.toFixed(2));
-      const litCount = Math.round(light * panels.length);
+      energyPage.style.setProperty("--daylight", daylight.toFixed(2));
+      energyPage.style.setProperty("--sun-glow", glow.toFixed(3));
+      energyPage.style.setProperty("--ambient-glow", (.12 + daylight * .2).toFixed(3));
+      energyPage.style.setProperty("--sun-opacity", (.72 + daylight * .22).toFixed(2));
+      energyPage.style.setProperty("--sun-ring-opacity", (.28 + daylight * .55).toFixed(2));
+
+      const sunScreenX = rect.left + energyPage.offsetWidth * x / 100;
+      const sunScreenY = rect.top + energyPage.offsetHeight * y / 100;
+      const readingZones = [...energyPage.querySelectorAll(".detail-top,.detail-hero h1,.detail-summary,.detail-info,.detail-body h2,.detail-body h3,.detail-body p,.detail-body li")];
+      const overlapsCopy = readingZones.some((node) => {
+        const box = node.getBoundingClientRect();
+        return box.width && box.height && sunScreenX > box.left - 42 && sunScreenX < box.right + 42 && sunScreenY > box.top - 38 && sunScreenY < box.bottom + 38;
+      });
+      if (sun) sun.classList.toggle("is-behind-copy", overlapsCopy);
+
+      const panelProgress = Math.max(0, Math.min(1, (progress - .42) / .4));
+      const litCount = Math.round(panelProgress * panels.length);
       panels.forEach((panel,index) => panel.classList.toggle("is-lit", index < litCount));
-      headings.forEach((heading,index) => heading.classList.toggle("is-lit", progress > Math.min(.95, .18 + index * .19)));
+      headings.forEach((heading,index) => heading.classList.toggle("is-lit", daylight > .12 && progress > Math.min(.95, .18 + index * .19)));
       ticking = false;
     };
     const onScroll = () => {
@@ -88,7 +105,6 @@
     window.addEventListener("resize", onScroll);
     updateEnergyScene();
   }
-
 
   // Explorations créatives: accessible coverflow gallery with keyboard, arrows and pointer depth.
   const creativeCarousel = document.querySelector("[data-creative-carousel]");
