@@ -1814,3 +1814,6 @@ a.project-card:focus-visible .home-case-art:before{
  .project-signature-band .signature-mark{gap:10px}
  .project-signature-band .signature-sun{flex-basis:21px}
 }
+
+.tiam-history{margin:0 0 26px;font:8px/1.5 var(--mono);letter-spacing:.1em;color:#a9a5c0}
+@media(max-width:760px){.tiam-history{font-size:7px;max-width:290px;margin-bottom:22px}}
