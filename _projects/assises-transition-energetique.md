@@ -22,7 +22,7 @@ J’ai intégré l’équipe organisatrice en appui à la préparation et au dé
 
 - Participer au suivi logistique de l’événement et à la préparation de ses différents temps forts.
 - Assurer le lien avec les partenaires, prestataires, congressistes et interlocuteurs internes.
-- Contribuer à l’organisation de la restauration et du dîner officiel.
+- Organiser de A à Z le dîner officiel, de sa préparation à sa mise en œuvre.
 - Prendre part aux réunions de coordination avec les agences, les partenaires, le protocole, les cabinets et les intervenants.
 
 ### Imaginer et créer les supports
@@ -33,7 +33,7 @@ J’ai intégré l’équipe organisatrice en appui à la préparation et au dé
 
 ### Être sur le terrain
 
-- Accompagner l’organisation des visites de sites proposées aux congressistes.
+- Organiser l’ensemble des visites de sites proposées aux congressistes et en assurer la coordination et la gestion sur le terrain, tout au long de leur déroulement.
 - Contribuer au suivi de la démarche Éco-Manifestation, qui a permis à l’événement d’obtenir le niveau 3, le plus élevé.
 - Contribuer à la coordination des équipes et au bon déroulement des séquences sur place, jusqu’à la soirée de gala.
 
