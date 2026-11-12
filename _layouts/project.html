@@ -3,65 +3,22 @@ layout: default
 ---
 {% if page.title contains "Assises" %}
 <main class="project-detail project-assises assises-world">
-  <section class="assises-hero" id="univers">
-    <img class="assises-hero-image" src="https://franceurbaine.org/app/uploads/2026/05/Annonce-AETE-elus-pour-France-Urbaine-1024x649.jpg" alt="Affiche de la 27e édition des Assises Européennes de la Transition Énergétique à Dijon">
-    <div class="assises-hero-overlay"></div>
-    <div class="assises-hero-grain"></div>
-    <div class="assises-hero-top">
-      <a href="{{ '/' | relative_url }}#projets">← QUITTER CET UNIVERS</a>
-      <span>ÉDITION DIJON · 2026</span>
-    </div>
-    <div class="assises-hero-content">
-      <p class="assises-overline">27e ASSISES EUROPÉENNES DE LA TRANSITION ÉNERGÉTIQUE</p>
-      <h1>MOBILISATION<br><em>GÉNÉRALE.</em></h1>
-      <div class="assises-hero-sub">
-        <p>Trois jours pour faire avancer<br>la transition des territoires.</p>
-        <span>DIJON<br>23—25 JUIN 2026</span>
-      </div>
-    </div>
-    <div class="assises-hero-bottom">
-      <span>UN ÉVÉNEMENT · DES TERRITOIRES · UN ÉLAN COLLECTIF</span>
-      <a href="#immersion" aria-label="Entrer dans le projet">DÉFILER POUR EXPLORER ↓</a>
+  <div class="detail-top">
+    <a href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a>
+    <span>{{ page.category }} · {{ page.year }}</span>
+  </div>
+  <section class="detail-hero">
+    <p class="eyebrow">27e ÉDITION · DIJON · 23—25 JUIN 2026</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.cover and page.cover != "" %}<img class="detail-cover" src="{{ page.cover | relative_url }}" alt="{{ page.title }}">{% endif %}
+    <p class="detail-summary">{{ page.summary }}</p>
+    <div class="detail-info">
+      <div><small>MON RÔLE</small><p>{{ page.role }}</p></div>
+      <div><small>OUTILS & COMPÉTENCES</small><p>{{ page.tools }}</p></div>
     </div>
   </section>
-
-  <section class="assises-entry" id="immersion">
-    <div class="assises-entry-label"><span>01 / L'ÉVÉNEMENT</span><span>DIJON · FRANCE</span></div>
-    <div class="assises-entry-grid">
-      <h2>UN TEMPS FORT<br>POUR <em>PASSER À L'ACTION.</em></h2>
-      <div class="assises-entry-copy">
-        <p class="assises-lead">Un événement d'envergure européenne, trois jours de rencontres et une même ambition : accélérer la transition énergétique des territoires.</p>
-        <p>En juin 2026, Dijon accueille la 27e édition des Assises. Collectivités, experts, acteurs économiques et institutionnels se retrouvent pour partager leurs expériences et faire émerger des solutions concrètes.</p>
-        <a class="assises-scroll-link" href="#mon-role">DÉCOUVRIR MA CONTRIBUTION <span>↘</span></a>
-      </div>
-    </div>
-    <div class="assises-data-line">
-      <div><strong>27<sup>e</sup></strong><span>ÉDITION</span></div>
-      <div><strong>03</strong><span>JOURS DE RENCONTRES</span></div>
-      <div><strong>3</strong><span>NIVEAU ÉCO-MANIFESTATION</span></div>
-    </div>
-  </section>
-
-  <section class="assises-role" id="mon-role">
-    <div class="assises-section-head"><span>02 / MA CONTRIBUTION</span><span>DE L'IDÉE AU TERRAIN</span></div>
-    <div class="assises-role-intro">
-      <p class="assises-role-index">AU CŒUR DE L'ORGANISATION</p>
-      <h2>COORDONNER.<br>IMAGINER.<br><em>CONCRÉTISER.</em></h2>
-      <p class="assises-role-desc">Au sein de l'équipe organisatrice de Dijon Métropole, j'ai participé à la préparation et au déroulement de l'événement. Un rôle transversal, entre coordination opérationnelle, création graphique et présence sur le terrain.</p>
-    </div>
-    <article class="assises-content">{{ content }}</article>
-  </section>
-
-  <section class="assises-outro">
-    <div class="assises-outro-mark">AETE<span> / 2026</span></div>
-    <p class="assises-outro-kicker">UNE EXPÉRIENCE QUI FAIT SENS</p>
-    <h2>FAIRE<br>BOUGER<br><em>LES LIGNES.</em></h2>
-    <p>Un projet collectif, concret et engagé, qui confirme mon goût pour la gestion de projet et l'événementiel.</p>
-    <div class="assises-outro-bottom">
-      <span>ÉCO-MANIFESTATION · NIVEAU 3 OBTENU</span>
-      <a href="{{ '/' | relative_url }}#projets">RETOUR AUX AUTRES UNIVERS ↗</a>
-    </div>
-  </section>
+  <article class="detail-body">{{ content }}</article>
+  <a class="back-projects" href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a>
 </main>
 {% else %}
 <main class="project-detail">
