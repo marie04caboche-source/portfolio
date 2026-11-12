@@ -2308,3 +2308,39 @@ a.project-card:focus-visible .home-case-art:before{
   color:#f7d94c;
   text-shadow:1px 1px 0 #f45b83,0 0 12px #f7d94c55;
 }
+
+
+/* Média Orléans homepage card — independent arrow motion, no shared Assises orbit */
+.home-media-arrow{
+  position:absolute;
+  z-index:4;
+  right:10%;
+  top:27%;
+  width:54px;
+  height:54px;
+  display:grid;
+  place-items:center;
+  border:1px solid #17151b;
+  border-radius:50%;
+  background:#17151b;
+  color:#fff2d6;
+  font-size:27px;
+  line-height:1;
+  transform:translate(0,0) rotate(0deg) scale(1);
+  transform-origin:center;
+  transition:transform .55s cubic-bezier(.2,.8,.2,1),background .35s ease,color .35s ease,border-color .35s ease;
+  pointer-events:none;
+}
+a.project-card:hover .home-media-arrow,
+a.project-card:focus-visible .home-media-arrow{
+  transform:translate(9px,-7px) rotate(45deg) scale(1.12);
+  background:#fff2d6;
+  color:#17151b;
+  border-color:#17151b;
+}
+@media(max-width:700px){
+  .home-media-arrow{width:44px;height:44px;right:7%;top:27%;font-size:22px}
+}
+@media(prefers-reduced-motion:reduce){
+  .home-media-arrow{transition:none}
+}
