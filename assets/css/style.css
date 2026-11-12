@@ -158,3 +158,23 @@
 }
 
 .about-intro .tattoo-moon:before{content:"☾";position:absolute;inset:0;display:block;font:inherit;line-height:1;color:currentColor}
+
+/* Refined tattoo treatment: restrained abstract marks, with the motto as the focal point */
+.tattoo-watermark{display:none!important}
+.about-hero:after,.about-method:after,.about-toolbox:after,.about-path:after{content:"";position:absolute;pointer-events:none;z-index:0;width:clamp(100px,17vw,220px);height:clamp(80px,13vw,170px);right:4%;top:18%;opacity:.075;border:1px solid currentColor;border-radius:43% 57% 62% 38% / 48% 39% 61% 52%;transform:rotate(-24deg) skew(-8deg,5deg)}
+.about-hero:after{border-width:2px;right:7%;top:22%;width:clamp(130px,19vw,250px);height:clamp(75px,11vw,145px);border-radius:61% 39% 53% 47% / 43% 57% 43% 57%;transform:rotate(28deg)}
+.about-method:after{border-radius:55% 45% 35% 65% / 60% 35% 65% 40%;transform:rotate(-38deg);border-style:dashed}
+.about-toolbox:after{border-radius:68% 32% 47% 53% / 35% 62% 38% 65%;transform:rotate(18deg);border-width:2px}
+.about-path:after{border-radius:30% 70% 55% 45% / 55% 35% 65% 45%;transform:rotate(42deg);border-style:dotted}
+.about-motto{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(16px,4vw,55px);max-width:820px;margin:15px auto 0;padding:32px 0 8px;border-top:1px solid #17171728}
+.about-motto p{margin:0;text-align:center;font:clamp(13px,2vw,21px) var(--mono);letter-spacing:.13em;white-space:nowrap}
+.about-motto p em{font-style:normal;color:#ff5e8a;font-weight:500}
+.motto-symbol{font-family:Georgia,serif;font-size:clamp(46px,7vw,82px);line-height:1;text-align:center;color:#4d63ff;opacity:.72}
+.motto-sun{justify-self:end}
+.motto-moon{justify-self:start;color:#ff5e8a;transform:rotate(-18deg)}
+@media(max-width:700px){
+ .about-hero:after,.about-method:after,.about-toolbox:after,.about-path:after{width:95px;height:70px;right:-18px;top:16%;opacity:.06}
+ .about-motto{gap:12px;padding-top:25px;margin-top:0}
+ .about-motto p{font-size:10px;letter-spacing:.07em}
+ .motto-symbol{font-size:39px}
+}
