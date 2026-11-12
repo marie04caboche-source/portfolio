@@ -1503,3 +1503,47 @@ a.project-card:focus-visible .home-case-art:before{
 
 /* Explorations gallery — remove the floating spherical orb */
 .creative-gallery .atmo-orb{display:none!important}
+
+
+/* Shared signature band: one portfolio code, interpreted for each project */
+.project-signature-band{--signature-accent:#ff5e8a;--signature-secondary:#4d63ff;--signature-progress:0;position:relative;z-index:5;min-height:54px;margin:0 0 22px;padding:0 18px;display:grid;grid-template-columns:1fr 68px auto 1fr;align-items:center;gap:18px;overflow:hidden;border:1px solid currentColor;font:9px var(--mono);letter-spacing:.12em}
+.signature-band-label,.signature-band-index{position:relative;z-index:2}
+.signature-band-label i{font-style:normal;color:var(--signature-accent);padding:0 7px}
+.signature-monogram{position:relative;z-index:3;font:900 27px/1 var(--sans);letter-spacing:-.13em;color:var(--signature-accent);transition:color .35s,text-shadow .35s,transform .35s;transform:rotate(-7deg)}
+.signature-sun{position:absolute;left:50%;top:50%;width:31px;height:31px;transform:translate(-50%,-50%);border-radius:50%;background:var(--signature-accent);box-shadow:0 0 0 8px color-mix(in srgb,var(--signature-accent) 16%,transparent),0 0 28px color-mix(in srgb,var(--signature-accent) 48%,transparent);transition:background 1s,box-shadow 1s}
+.signature-sun:before,.signature-sun:after{content:"";position:absolute;inset:-12px;border:1px solid color-mix(in srgb,var(--signature-accent) 70%,transparent);border-radius:50%;transform:scale(calc(1 + var(--signature-progress)*.55));transition:transform .5s,border-color .8s}
+.signature-sun:after{inset:-21px;opacity:.45;transform:scale(calc(1.15 - var(--signature-progress)*.2))}
+.signature-gallery{color:#171717;background:linear-gradient(100deg,#fff9f3,#f5eaf1 48%,#f1efff);border-color:#17171725;--signature-accent:#ff5e8a;--signature-secondary:#4d63ff}
+.signature-gallery .signature-band-index{text-align:right}
+.signature-gallery .signature-monogram{text-shadow:2px 2px 0 #d7ff36}
+.signature-tiam{color:#f4f1eb;background:linear-gradient(100deg,#111116,#202033 55%,#16161b);border-color:#ffffff35;--signature-accent:#ff477e;--signature-secondary:#d7ff38}
+.signature-tiam .signature-band-label i{color:var(--tiam-acid)}
+.signature-tiam .signature-monogram{text-shadow:2px 2px 0 var(--tiam-acid)}
+.signature-tiam .signature-court-mark{position:absolute;left:50%;top:50%;width:100px;height:38px;transform:translate(-50%,-50%);border:1px solid #ffffff45;border-radius:50%;rotate:-18deg;transition:rotate .8s,scale .8s}
+.signature-tiam .signature-court-mark:before,.signature-tiam .signature-court-mark:after{content:"";position:absolute;inset:5px 20px;border:1px solid var(--signature-accent);border-radius:50%}
+.signature-tiam .signature-court-mark:after{inset:12px 34px;border-color:var(--signature-secondary)}
+.signature-tiam .signature-court-mark i{position:absolute;left:50%;top:-5px;height:48px;border-left:1px solid #ffffff55}
+.signature-tiam .signature-court-mark b{position:absolute;left:50%;top:50%;width:5px;height:5px;border-radius:50%;background:var(--signature-accent);transform:translate(-50%,-50%)}
+.project-signature-band .signature-band-index{justify-self:end}
+.project-signature-band .signature-band-label{white-space:nowrap}
+.project-signature-band .signature-monogram{justify-self:center}
+.project-signature-band .signature-band-index{white-space:nowrap}
+.signature-tiam .signature-band-index{color:#d7ff38}
+.signature-tiam .signature-monogram{color:var(--signature-accent)}
+.signature-gallery .signature-monogram{color:var(--signature-accent)}
+.signature-gallery .signature-sun{animation:signature-sun-pulse 5s ease-in-out infinite alternate}
+.signature-tiam .signature-court-mark{animation:signature-court-turn 12s ease-in-out infinite alternate}
+@keyframes signature-sun-pulse{to{scale:1.14;filter:saturate(1.3)}}
+@keyframes signature-court-turn{to{rotate:18deg;scale:1.12}}
+.creative-gallery[data-active="1"] .signature-monogram{color:#4d63ff;text-shadow:2px 2px 0 #ff5e8a}
+.creative-gallery[data-active="2"] .signature-monogram{color:#8aa900;text-shadow:2px 2px 0 #4d63ff}
+.tiam-world .project-signature-band{position:relative}
+.tiam-world .signature-monogram{color:color-mix(in srgb,var(--tiam-pink) calc(100% - var(--signature-progress)*55%),var(--tiam-blue))}
+@media(max-width:700px){
+ .project-signature-band{min-height:47px;margin-bottom:16px;padding:0 10px;grid-template-columns:1fr 38px auto;gap:8px;font-size:7px;letter-spacing:.07em}
+ .project-signature-band .signature-band-index{display:none}
+ .signature-sun{width:23px;height:23px}
+ .signature-tiam .signature-court-mark{width:70px;height:28px}
+ .signature-monogram{font-size:23px}
+}
+@media(prefers-reduced-motion:reduce){.signature-sun,.signature-court-mark{animation:none!important}.signature-monogram,.signature-sun,.signature-sun:before,.signature-sun:after{transition:none!important}}
