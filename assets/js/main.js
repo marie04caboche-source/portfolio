@@ -89,4 +89,49 @@
     updateEnergyScene();
   }
 
+
+  // Explorations créatives: accessible coverflow gallery with keyboard, arrows and pointer depth.
+  const creativeCarousel = document.querySelector("[data-creative-carousel]");
+  if (creativeCarousel) {
+    const slides = [...creativeCarousel.querySelectorAll(".creative-slide")];
+    const counter = creativeCarousel.querySelector(".creative-counter b");
+    const progress = creativeCarousel.querySelector(".creative-progress i");
+    const prev = creativeCarousel.querySelector(".creative-arrow-prev");
+    const next = creativeCarousel.querySelector(".creative-arrow-next");
+    let active = 0;
+    const renderGallery = () => {
+      slides.forEach((slide, index) => {
+        slide.classList.remove("is-active", "is-before", "is-after");
+        slide.removeAttribute("aria-current");
+        if (index === active) { slide.classList.add("is-active"); slide.setAttribute("aria-current", "true"); }
+        else if (index === (active - 1 + slides.length) % slides.length) slide.classList.add("is-before");
+        else if (index === (active + 1) % slides.length) slide.classList.add("is-after");
+      });
+      if (counter) counter.textContent = String(active + 1).padStart(2, "0");
+      if (progress) progress.style.width = ((active + 1) / slides.length * 100) + "%";
+    };
+    const move = (direction) => { active = (active + direction + slides.length) % slides.length; renderGallery(); };
+    prev?.addEventListener("click", () => move(-1));
+    next?.addEventListener("click", () => move(1));
+    creativeCarousel.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") { event.preventDefault(); move(-1); }
+      if (event.key === "ArrowRight") { event.preventDefault(); move(1); }
+    });
+    const stage = creativeCarousel.querySelector(".creative-stage");
+    if (stage && window.matchMedia("(hover: hover) and (pointer: fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      stage.addEventListener("pointermove", (event) => {
+        const rect = stage.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - .5;
+        const y = (event.clientY - rect.top) / rect.height - .5;
+        const art = stage.querySelector(".creative-slide.is-active .creative-art");
+        if (art) art.style.transform = "perspective(1000px) rotateY(" + (x * 3) + "deg) rotateX(" + (y * -3) + "deg)";
+      });
+      stage.addEventListener("pointerleave", () => {
+        const art = stage.querySelector(".creative-slide.is-active .creative-art");
+        if (art) art.style.transform = "";
+      });
+    }
+    renderGallery();
+  }
+
 })();
