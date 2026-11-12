@@ -424,3 +424,159 @@
 .home-case-title{width:100%;font-size:clamp(42px,12vw,70px);margin-top:auto;margin-bottom:18px}
 .home-case-top,.home-case-bottom{font-size:7px}
 }
+
+
+/* =========================================================
+   ASSISES 2026 — immersive project universe
+   Palette drawn from the 2026 Dijon campaign artwork:
+   forest / lime / turquoise / white. Separate from portfolio.
+   ========================================================= */
+.assises-world{
+  --a-forest:#102f2c;
+  --a-deep:#082522;
+  --a-lime:#b9df4c;
+  --a-cyan:#35c4b8;
+  --a-white:#f4f4e9;
+  --a-ink:#102b28;
+  padding:0!important;
+  margin:0;
+  background:var(--a-forest);
+  color:var(--a-white);
+  font-family:var(--sans);
+}
+.assises-world .assises-hero{
+  min-height:min(850px,calc(100svh - 72px));
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:24px 5vw 22px;
+  background:linear-gradient(115deg,#9ccf42 0%,#35c4b8 58%,#087f79 100%);
+}
+.assises-hero-image{
+  position:absolute;z-index:-3;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center 42%;
+  transform:scale(1.035);
+  filter:saturate(.92) contrast(1.05);
+  transition:transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+.assises-hero-overlay{
+  position:absolute;z-index:-2;inset:0;
+  background:
+    linear-gradient(90deg,rgba(9,43,38,.76) 0%,rgba(9,43,38,.42) 45%,rgba(8,100,91,.2) 100%),
+    linear-gradient(0deg,rgba(5,34,31,.78) 0%,transparent 37%,rgba(9,43,38,.12) 100%);
+}
+.assises-hero-grain{
+  position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.16;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.24'/%3E%3C/svg%3E");
+  mix-blend-mode:soft-light;
+}
+.assises-hero-top,.assises-hero-bottom{
+  display:flex;justify-content:space-between;gap:20px;align-items:center;
+  position:relative;z-index:2;font:10px var(--mono);letter-spacing:.12em;
+}
+.assises-hero-top a,.assises-hero-bottom a{border-bottom:1px solid #ffffff80;padding-bottom:7px}
+.assises-hero-content{position:relative;z-index:2;padding:9vh 0 10vh;max-width:1100px}
+.assises-overline,.assises-entry-label,.assises-section-head,.assises-role-index,.assises-outro-kicker{
+  font:10px var(--mono);letter-spacing:.18em;
+}
+.assises-overline{margin:0 0 26px;color:var(--a-lime)}
+.assises-hero h1{
+  font-size:clamp(76px,13.7vw,196px);line-height:.76;letter-spacing:-.105em;
+  font-weight:850;margin:0;color:var(--a-white);text-wrap:balance;
+}
+.assises-hero h1 em{font-style:normal;color:var(--a-lime)}
+.assises-hero-sub{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-top:42px;max-width:700px}
+.assises-hero-sub p{font-size:clamp(17px,2vw,25px);font-weight:600;line-height:1.3;margin:0}
+.assises-hero-sub span{text-align:right;font:10px/1.7 var(--mono);letter-spacing:.12em}
+.assises-hero-bottom{color:#fff}
+.assises-entry{padding:36px 8vw 0;background:var(--a-white);color:var(--a-ink)}
+.assises-entry-label,.assises-section-head{display:flex;justify-content:space-between;border-top:1px solid #102b2840;padding-top:13px}
+.assises-entry-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:8vw;align-items:end;padding:105px 0 90px}
+.assises-entry h2,.assises-role h2,.assises-outro h2{
+  font-size:clamp(52px,8.8vw,126px);line-height:.84;letter-spacing:-.095em;margin:0;font-weight:820;
+}
+.assises-entry h2 em{font-style:normal;color:#169f8e}
+.assises-entry-copy{max-width:520px;font-size:15px;line-height:1.8}
+.assises-entry-copy p{margin:0 0 18px}
+.assises-entry-copy .assises-lead{font-size:21px;line-height:1.42;font-weight:700}
+.assises-scroll-link{display:inline-flex;gap:30px;margin-top:18px;padding-bottom:8px;border-bottom:1px solid;font:10px var(--mono);letter-spacing:.1em}
+.assises-scroll-link span{color:#159b8d}
+.assises-data-line{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #102b2840}
+.assises-data-line>div{padding:28px 22px 30px 0;display:flex;flex-direction:column;gap:10px;border-right:1px solid #102b2840}
+.assises-data-line>div+div{padding-left:24px}
+.assises-data-line>div:last-child{border:0}
+.assises-data-line strong{font-size:clamp(52px,7vw,92px);line-height:.85;letter-spacing:-.09em}
+.assises-data-line sup{font-size:.35em;vertical-align:top}
+.assises-data-line span{font:9px var(--mono);letter-spacing:.1em}
+.assises-role{padding:38px 8vw 110px;background:var(--a-forest);color:var(--a-white)}
+.assises-section-head{border-color:#ffffff55}
+.assises-role-intro{display:grid;grid-template-columns:.75fr 1.3fr .8fr;gap:35px;align-items:end;padding:100px 0 90px}
+.assises-role-index{color:var(--a-cyan);align-self:start;margin:8px 0 0}
+.assises-role h2{font-size:clamp(54px,8vw,112px)}
+.assises-role h2 em{font-style:normal;color:var(--a-lime)}
+.assises-role-desc{font-size:15px;line-height:1.75;max-width:350px;margin:0}
+.assises-content{max-width:950px;margin-left:auto;border-top:1px solid #ffffff55}
+.assises-content h2{
+  font-size:clamp(34px,5vw,66px);line-height:.95;letter-spacing:-.07em;
+  margin:0;padding:55px 0 20px;color:var(--a-lime);
+}
+.assises-content h3{font-size:22px;letter-spacing:-.04em;margin:34px 0 12px;color:var(--a-cyan)}
+.assises-content p,.assises-content li{font-size:16px;line-height:1.8;color:#e4eee9}
+.assises-content ul{padding-left:20px}
+.assises-content li{padding-left:7px;margin:8px 0}
+.assises-content h2:not(:first-child){border-top:1px solid #ffffff33;margin-top:70px}
+.assises-content h2:last-of-type{color:var(--a-lime)}
+.assises-outro{
+  min-height:650px;padding:40px 8vw 28px;background:var(--a-lime);color:var(--a-ink);
+  display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;
+}
+.assises-outro:before{
+  content:"";position:absolute;width:48vw;height:48vw;max-width:700px;max-height:700px;
+  border:1px solid #102b2840;border-radius:50%;right:-12vw;top:5%;
+  box-shadow:0 0 0 32px #102b2808,0 0 0 70px #102b2808,0 0 0 110px #102b2808;
+}
+.assises-outro-mark{font:14px var(--mono);letter-spacing:.12em;position:relative}
+.assises-outro-mark span{color:#128f82}
+.assises-outro-kicker{position:relative;margin:80px 0 18px}
+.assises-outro h2{font-size:clamp(76px,13vw,180px);position:relative}
+.assises-outro h2 em{font-style:normal;color:#128f82}
+.assises-outro>p:not(.assises-outro-kicker){font-size:18px;line-height:1.5;max-width:440px;position:relative;margin:30px 0 60px}
+.assises-outro-bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #102b2840;padding-top:14px;font:10px var(--mono);letter-spacing:.1em;position:relative}
+.assises-world .detail-top,.assises-world .detail-hero,.assises-world .detail-info,.assises-world .back-projects{display:none}
+.assises-world .assises-hero,.assises-world .assises-entry,.assises-world .assises-role,.assises-world .assises-outro{scroll-margin-top:72px}
+@media(max-width:760px){
+ .assises-world .assises-hero{min-height:calc(90svh - 62px);padding:17px 5vw}
+ .assises-hero-top,.assises-hero-bottom{font-size:8px;letter-spacing:.06em}
+ .assises-hero-content{padding:8vh 0}
+ .assises-overline{font-size:8px;line-height:1.6;max-width:250px}
+ .assises-hero h1{font-size:clamp(60px,15vw,112px)}
+ .assises-hero-sub{margin-top:30px}
+ .assises-hero-sub p{font-size:16px}
+ .assises-hero-sub span{font-size:8px}
+ .assises-hero-bottom span{max-width:48%;line-height:1.5}
+ .assises-entry{padding:24px 6vw 0}
+ .assises-entry-grid{grid-template-columns:1fr;gap:35px;padding:65px 0}
+ .assises-entry h2,.assises-role h2{font-size:clamp(50px,13vw,84px)}
+ .assises-entry-copy .assises-lead{font-size:18px}
+ .assises-data-line>div{padding:18px 9px 20px 0;gap:8px}
+ .assises-data-line>div+div{padding-left:10px}
+ .assises-data-line strong{font-size:clamp(38px,10vw,58px)}
+ .assises-data-line span{font-size:7px;line-height:1.5}
+ .assises-role{padding:24px 6vw 75px}
+ .assises-role-intro{grid-template-columns:1fr;gap:25px;padding:65px 0}
+ .assises-role-index{margin:0}
+ .assises-role-desc{max-width:520px}
+ .assises-content h2{font-size:38px;padding-top:40px}
+ .assises-content h3{font-size:19px}
+ .assises-content p,.assises-content li{font-size:14px}
+ .assises-content h2:not(:first-child){margin-top:48px}
+ .assises-outro{min-height:520px;padding:28px 6vw 20px}
+ .assises-outro h2{font-size:clamp(70px,17vw,112px)}
+ .assises-outro-bottom{font-size:8px;line-height:1.5}
+}
+@media(prefers-reduced-motion:reduce){
+ .assises-hero-image{transition:none}
+}
