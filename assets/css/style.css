@@ -1947,7 +1947,8 @@ a.project-card:focus-visible .home-case-art:before{
 .home-crous-title{position:relative;z-index:2;font-size:clamp(30px,5.4vw,72px);font-weight:950;line-height:.82;letter-spacing:-.09em}
 .home-crous-title em{font-style:normal;color:#f7d94c;text-shadow:2px 2px 0 #211d28}
 .home-crous-star{position:absolute;right:12%;top:18%;font-size:clamp(75px,12vw,150px);line-height:1;color:#ff9c86;text-shadow:4px 4px 0 #f7d94c;transition:transform .8s}
-.project-card:hover .home-crous-star{transform:rotate(70deg) scale(1.2)}
+.home-crous-star{transform:rotate(-24deg);transform-origin:center;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.project-card:hover .home-crous-star{transform:rotate(0deg) scale(1.08)}
 .home-crous-bottom{border-top:1px solid #ffffff65;padding-top:10px}
 @media(max-width:700px){.home-crous-art{padding:18px 6%}.home-crous-title{font-size:clamp(40px,12vw,62px)}.home-crous-top,.home-crous-bottom{font-size:7px}}
 
