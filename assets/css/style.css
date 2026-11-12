@@ -2147,3 +2147,10 @@ a.project-card:focus-visible .home-case-art:before{
 .project-card:focus-visible .home-case-art .home-case-orbit{
   transform:scale(1.2) rotate(20deg);
 }
+.project-card .home-case-art .home-case-orbit span{
+  transform:none;
+  transition:none;
+  background:var(--acid);
+  color:var(--ink);
+  box-shadow:none;
+}
