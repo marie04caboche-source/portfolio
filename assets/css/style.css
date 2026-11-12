@@ -1244,16 +1244,17 @@ a.project-card .home-case-art .home-case-orbit span{
   transform:translate(0,0) rotate(35deg) scale(1);
   transition:transform .45s cubic-bezier(.18,.75,.25,1),background .35s ease,color .35s ease,box-shadow .35s ease;
 }
+/* Match the exact hover movement used by the other project-card visuals */
 a.project-card:hover .home-case-art .home-case-orbit,
 a.project-card:focus-visible .home-case-art .home-case-orbit{
-  transform:rotate(12deg) scale(1.24);
+  transform:scale(1.2) rotate(20deg);
 }
 a.project-card:hover .home-case-art .home-case-orbit span,
 a.project-card:focus-visible .home-case-art .home-case-orbit span{
-  transform:translate(7px,-7px) rotate(70deg) scale(1.08);
-  background:var(--pink);
+  transform:rotate(24deg);
+  background:var(--acid);
   color:var(--ink);
-  box-shadow:0 0 24px #ff5e8a88;
+  box-shadow:none;
 }
 a.project-card:hover .home-case-art:before,
 a.project-card:focus-visible .home-case-art:before{
