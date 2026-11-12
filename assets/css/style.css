@@ -2133,3 +2133,17 @@ a.project-card:focus-visible .home-case-art:before{
     animation:none!important
   }
 }
+
+
+/* FINAL — Assises card hover: identical motion to the standard project-card shape */
+.project-card .home-case-art .home-case-orbit{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  transform:rotate(-24deg);
+  transition:transform .7s;
+}
+.project-card:hover .home-case-art .home-case-orbit,
+.project-card:focus-visible .home-case-art .home-case-orbit{
+  transform:scale(1.2) rotate(20deg);
+}
