@@ -70,6 +70,85 @@ layout: default
     <div class="creative-gallery-footer"><span>CRÉER · EXPÉRIMENTER · RECOMMENCER</span><span>UNE COLLECTION EN CONSTRUCTION ↗</span></div>
   </section>
 </main>
+{% elsif page.title contains "TIAM" %}
+<main class="tiam-world">
+  <div class="tiam-noise" aria-hidden="true"></div>
+  <div class="tiam-orbit-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+  <header class="tiam-topbar">
+    <a href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a>
+    <span>SPORT / IDENTITÉ VISUELLE / COMMUNICATION</span>
+    <span class="tiam-index">PROJECT 02 — 02 EDITIONS</span>
+  </header>
+
+  <section class="tiam-hero">
+    <div class="tiam-hero-copy">
+      <p class="tiam-kicker"><span></span> INTERNATIONAL BASKETBALL TOURNAMENT</p>
+      <h1 class="tiam-title"><span>TI</span><span class="tiam-title-a">A</span><span>M</span><b>®</b></h1>
+      <div class="tiam-hero-baseline">
+        <strong>TWO EDITIONS.<br><em>ONE GAME.</em></strong>
+        <p>Deux éditions du tournoi. Deux identités visuelles, pensées pour faire vivre le même esprit sportif.</p>
+      </div>
+    </div>
+    <div class="tiam-hero-art" aria-hidden="true">
+      <div class="tiam-speed-rings"></div>
+      <div class="tiam-ball"><span></span><i></i></div>
+      <div class="tiam-stamp tiam-stamp-one">18<small>TH</small></div>
+      <div class="tiam-stamp tiam-stamp-two">19<small>TH</small></div>
+      <div class="tiam-art-label">PLAY<br>LOUD.</div>
+      <div class="tiam-crosshair">+</div>
+    </div>
+    <div class="tiam-hero-foot"><span>VISUAL IDENTITY / 18TH & 19TH EDITIONS</span><span>SCROLL TO PLAY ↓</span></div>
+  </section>
+
+  <div class="tiam-international" aria-label="Dimension internationale du tournoi">
+    <div class="tiam-international-track"><span>ONE COURT, MANY CULTURES</span><b>✳</b><span>BÉNIN</span><b>✳</b><span>ESPAGNE</span><b>✳</b><span>POLOGNE</span><b>✳</b><span>BELGIQUE</span><b>✳</b><span>ONE COURT, MANY CULTURES</span><b>✳</b><span>BÉNIN</span><b>✳</b><span>ESPAGNE</span><b>✳</b><span>POLOGNE</span><b>✳</b><span>BELGIQUE</span><b>✳</b></div>
+  </div>
+
+  <section class="tiam-editions" id="editions">
+    <div class="tiam-section-head">
+      <p class="tiam-kicker"><span></span> SAME TOURNAMENT / NEW VISUALS</p>
+      <h2>TWO TAKES<br><em>ON THE GAME.</em></h2>
+      <p>Deux éditions présentées en miroir. Chaque univers possède son propre logo, son tee-shirt et ses déclinaisons de communication.</p>
+    </div>
+    <div class="tiam-edition-grid">
+      <article class="tiam-edition tiam-edition-18">
+        <div class="tiam-edition-top"><span>TIAM / VISUAL IDENTITY</span><span>01 — 18e ÉDITION</span></div>
+        <div class="tiam-edition-visual">
+          <span class="tiam-edition-number">18</span>
+          <span class="tiam-edition-word">EDITION</span>
+          <span class="tiam-edition-ball" aria-hidden="true"></span>
+          <span class="tiam-edition-mark">HOME<br>COURT</span>
+        </div>
+        <div class="tiam-edition-bottom"><strong>18e édition</strong><span>LOGO · TEE-SHIRT · COMMUNICATION</span></div>
+      </article>
+      <article class="tiam-edition tiam-edition-19">
+        <div class="tiam-edition-top"><span>TIAM / VISUAL IDENTITY</span><span>02 — 19e ÉDITION</span></div>
+        <div class="tiam-edition-visual">
+          <span class="tiam-edition-number">19</span>
+          <span class="tiam-edition-word">EDITION</span>
+          <span class="tiam-edition-ball" aria-hidden="true"></span>
+          <span class="tiam-edition-mark">AWAY<br>COURT</span>
+        </div>
+        <div class="tiam-edition-bottom"><strong>19e édition</strong><span>LOGO · TEE-SHIRT · COMMUNICATION</span></div>
+      </article>
+    </div>
+    <div class="tiam-compare-note"><span>18 → 19</span><p>Une même compétition, deux propositions graphiques. Les créations originales viendront prendre place ici.</p><span>KEEP MOVING ↗</span></div>
+  </section>
+
+  <section class="tiam-work-strip">
+    <div class="tiam-work-title"><span>THE WORK</span><strong>LOGO.<br>TEXTILE.<br>COMMS.</strong></div>
+    <div class="tiam-work-items">
+      <div><span>01</span><strong>LOGO</strong><small>IDENTITÉ DE L'ÉDITION</small></div>
+      <div><span>02</span><strong>TEE-SHIRT</strong><small>DÉCLINAISON TEXTILE</small></div>
+      <div><span>03</span><strong>COMMUNICATION</strong><small>SUPPORTS & VISIBILITÉ</small></div>
+    </div>
+  </section>
+
+  <footer class="tiam-footer">
+    <span>TIAM — BASKETBALL / 18e & 19e ÉDITIONS</span>
+    <a href="{{ '/' | relative_url }}#projets">RETOUR AUX PROJETS ↑</a>
+  </footer>
+</main>
 {% else %}
 <main class="project-detail">
   <div class="detail-top"><a href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a><span>{{ page.category }} · {{ page.year }}</span></div>
