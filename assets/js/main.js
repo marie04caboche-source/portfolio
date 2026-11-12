@@ -210,6 +210,31 @@
     }
   }
 
+  // TIAM: reveal a country-specific team-photo area, ready for the real images.
+  const countryGallery = document.querySelector("[data-tiam-country-gallery]");
+  if (countryGallery) {
+    const countryButtons = [...document.querySelectorAll(".tiam-country-list [data-country]")];
+    const countryName = countryGallery.querySelector("[data-tiam-country-name]");
+    const closeCountry = countryGallery.querySelector("[data-tiam-country-close]");
+    const closeCountryGallery = () => {
+      countryGallery.hidden = true;
+      countryButtons.forEach((button) => {
+        button.classList.remove("is-selected");
+        button.setAttribute("aria-expanded", "false");
+      });
+    };
+    countryButtons.forEach((button) => button.addEventListener("click", () => {
+      const wasSelected = button.classList.contains("is-selected");
+      closeCountryGallery();
+      if (wasSelected) return;
+      button.classList.add("is-selected");
+      button.setAttribute("aria-expanded", "true");
+      if (countryName) countryName.textContent = button.dataset.country;
+      countryGallery.hidden = false;
+    }));
+    closeCountry?.addEventListener("click", closeCountryGallery);
+  }
+
 })();
 
 
