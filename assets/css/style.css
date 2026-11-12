@@ -1112,3 +1112,7 @@ body:has(.assises-world) .nav-availability i { background: var(--a-lime); box-sh
   background: var(--pink);
   color: var(--ink);
 }
+
+
+/* Restore the Assises project title: the legacy campaign layout hid the standard hero. */
+.assises-world .detail-hero { display: block; }
