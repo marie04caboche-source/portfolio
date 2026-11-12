@@ -2044,3 +2044,91 @@ a.project-card:focus-visible .home-case-art:before{
   .tiam-work-items{grid-template-columns:1fr;gap:18px}
   .tiam-work-items>div{min-height:105px;gap:10px}
 }
+
+
+/* CROUS final refinements — the global site navigation is the only header */
+.crous-life .project-signature-band,
+.crous-life>.crous-topbar{display:none!important}
+.crous-hero-bottom-copy{align-items:flex-start}
+.crous-hero-bottom-copy p{max-width:430px}
+.crous-visual-note{grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,90px)}
+.crous-visual-note>div:nth-child(2){grid-column:1}
+.crous-visual-note>p{grid-column:2;grid-row:1;max-width:480px}
+
+/* A few slow-moving graphic layers, kept behind the content. */
+.crous-hero:after{
+  content:"";position:absolute;z-index:0;pointer-events:none;
+  width:clamp(180px,28vw,420px);aspect-ratio:1;border-radius:50%;
+  right:16%;top:17%;
+  background:radial-gradient(circle at 35% 35%,#f7d94caa 0 5%,#f45b8340 28%,#5665ce12 58%,transparent 70%);
+  filter:blur(2px);mix-blend-mode:multiply;
+  animation:crous-ambient-drift 13s ease-in-out infinite alternate;
+}
+.crous-hero-art{perspective:1000px}
+.crous-poster{will-change:transform}
+.crous-poster-one{animation:crous-poster-float-one 7s ease-in-out infinite alternate}
+.crous-poster-two{animation:crous-poster-float-two 8s ease-in-out infinite alternate}
+.crous-hero-art:hover .crous-poster-one{animation-play-state:paused;transform:translate(-13px,-20px) rotate(-14deg) scale(1.035);box-shadow:18px 22px 0 #211d2830}
+.crous-hero-art:hover .crous-poster-two{animation-play-state:paused;transform:translate(17px,14px) rotate(15deg) scale(1.035);box-shadow:18px 22px 0 #211d2830}
+.crous-sunburst{transform-origin:center;transition:filter .45s,scale .45s}
+.crous-hero-art:hover .crous-sunburst{scale:1.12;filter:drop-shadow(0 12px 0 #5665ce45)}
+.crous-story{overflow:hidden}
+.crous-story:before{
+  content:"";position:absolute;pointer-events:none;right:-12%;top:12%;width:36vw;aspect-ratio:1;
+  border:1px solid #211d2825;border-radius:50%;
+  box-shadow:0 0 0 22px #211d2808,0 0 0 54px #211d2807,0 0 0 92px #211d2806;
+  animation:crous-story-orbit 32s linear infinite;
+}
+.crous-story-grid,.crous-story-index,.crous-story-ribbon{position:relative;z-index:1}
+.crous-story-ribbon span{transition:color .25s,transform .25s}
+.crous-story-ribbon span:hover{color:var(--crous-orange);transform:translateY(-4px)}
+.crous-story-ribbon b{transition:transform .5s}
+.crous-story-ribbon b:hover{transform:rotate(90deg) scale(1.35)}
+.crous-missions{overflow:hidden}
+.crous-missions:before{
+  content:"✳";position:absolute;right:4%;top:6%;font-size:clamp(100px,18vw,250px);
+  line-height:1;color:#f45b8310;pointer-events:none;
+  animation:crous-mission-star 18s linear infinite;
+}
+.crous-section-heading,.crous-mission-grid{position:relative;z-index:1}
+.crous-mission-card{transform-style:preserve-3d}
+.crous-mission-card:before{
+  content:"";position:absolute;inset:-40% auto -40% -55%;width:35%;
+  background:linear-gradient(90deg,transparent,#ffffff55,transparent);
+  transform:skewX(-18deg);transition:left .7s ease;pointer-events:none;
+}
+.crous-mission-card:hover:before{left:130%}
+.crous-mission-card:hover strong{transform:translateX(5px)}
+.crous-mission-card strong{transition:transform .35s}
+.crous-visual-note{overflow:hidden}
+.crous-visual-note:before{
+  content:"";position:absolute;right:-7%;bottom:-90%;width:30vw;aspect-ratio:1;
+  border:1px solid #5665ce50;border-radius:50%;
+  box-shadow:0 0 0 22px #5665ce0c,0 0 0 48px #f45b830a;
+  animation:crous-note-orbit 24s linear infinite;
+  pointer-events:none;
+}
+.crous-visual-note>div,.crous-visual-note>p{position:relative;z-index:1}
+.crous-visual-note h2 em{transition:color .35s,text-shadow .35s}
+.crous-visual-note:hover h2 em{color:var(--crous-blue);text-shadow:4px 4px 0 var(--crous-yellow)}
+.crous-footer>strong{transition:transform .4s}
+.crous-footer:hover>strong{transform:translateX(8px)}
+@keyframes crous-ambient-drift{0%{transform:translate3d(-18px,-10px,0) scale(.92)}100%{transform:translate3d(28px,22px,0) scale(1.1)}}
+@keyframes crous-poster-float-one{0%{transform:translateY(0) rotate(-9deg)}100%{transform:translateY(-9px) rotate(-7deg)}}
+@keyframes crous-poster-float-two{0%{transform:translateY(0) rotate(9deg)}100%{transform:translateY(10px) rotate(7deg)}}
+@keyframes crous-story-orbit{to{transform:rotate(360deg)}}
+@keyframes crous-mission-star{to{transform:rotate(360deg)}}
+@keyframes crous-note-orbit{to{transform:rotate(-360deg)}}
+@media(max-width:760px){
+  .crous-visual-note{grid-template-columns:1fr;gap:24px}
+  .crous-visual-note>div:nth-child(2){grid-column:1}
+  .crous-visual-note>p{grid-column:1;grid-row:auto}
+  .crous-hero:after{right:-12%;top:35%;width:60vw}
+  .crous-mission-card:hover{transform:translateY(-5px)}
+}
+@media(prefers-reduced-motion:reduce){
+  .crous-hero:before,.crous-hero:after,.crous-orbit-one,.crous-orbit-two,.crous-sunburst,
+  .crous-poster-one,.crous-poster-two,.crous-story:before,.crous-missions:before,.crous-visual-note:before{
+    animation:none!important
+  }
+}
