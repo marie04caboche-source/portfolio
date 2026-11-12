@@ -940,3 +940,62 @@ body:has(.assises-world) .nav-availability i { background: var(--a-lime); box-sh
 @media(prefers-reduced-motion:reduce) {
   .assises-world:before, .assises-world .detail-hero:before { animation: none !important; }
 }
+
+
+/* Homepage Assises card — restore the abstract graphic artwork (no campaign photo) */
+.home-case-art{
+  position:absolute;inset:0;padding:22px 24px;overflow:hidden;
+  background:linear-gradient(135deg,#4d63ff 0%,#3154d9 58%,#172c86 100%);
+  color:#fff;display:flex;flex-direction:column;justify-content:space-between;isolation:isolate
+}
+.home-case-art:before{
+  content:"";position:absolute;width:74%;aspect-ratio:1;border:1px solid #ffffff66;
+  border-radius:50%;right:-17%;top:4%;
+  box-shadow:0 0 0 28px #ffffff0d,0 0 0 58px #ffffff0a,0 0 0 92px #ffffff08;
+  z-index:-1;transition:transform .8s cubic-bezier(.2,.7,.2,1)
+}
+.home-case-top,.home-case-bottom{
+  display:flex;justify-content:space-between;gap:10px;
+  font:9px var(--mono);letter-spacing:.1em;position:relative;z-index:2
+}
+.home-case-title{
+  font-size:clamp(37px,6.3vw,88px);font-weight:800;line-height:.78;
+  letter-spacing:-.09em;position:relative;z-index:2;max-width:78%
+}
+.home-case-title em{font-style:normal;color:var(--acid)}
+.home-case-orbit{
+  position:absolute;width:34%;aspect-ratio:1;border:1px solid #ffffff88;
+  border-radius:50%;right:9%;top:24%;transform:rotate(-24deg);
+  z-index:1;transition:transform .8s cubic-bezier(.2,.7,.2,1);
+}
+.home-case-orbit:before,.home-case-orbit:after{
+  content:"";position:absolute;inset:12%;border:1px solid #ffffff88;
+  border-radius:50%;transform:scaleX(.38) rotate(48deg)
+}
+.home-case-orbit:after{
+  inset:-9%;border-color:var(--acid);transform:scaleY(.35) rotate(-38deg)
+}
+.home-case-orbit i,.home-case-orbit b{
+  position:absolute;width:10px;height:10px;border-radius:50%;
+  background:var(--pink);top:12%;right:18%;box-shadow:0 0 18px #ff5e8a99
+}
+.home-case-orbit b{
+  background:var(--acid);top:auto;right:auto;bottom:9%;left:20%;
+  width:7px;height:7px
+}
+.home-case-orbit span{
+  position:absolute;right:-9px;bottom:2px;width:42px;height:42px;
+  display:grid;place-items:center;border:1px solid var(--acid);
+  border-radius:50%;background:var(--acid);color:#171717;font-size:22px;
+  transform:rotate(24deg);transition:transform .35s,background .35s,color .35s
+}
+.project-card:hover .home-case-art:before{transform:scale(1.12) rotate(18deg)}
+.project-card:hover .home-case-orbit{transform:rotate(0deg) scale(1.08)}
+.project-card:hover .home-case-orbit span{transform:rotate(69deg) scale(1.08);background:var(--pink);color:#171717}
+@media(max-width:700px){
+  .home-case-art{padding:17px}
+  .home-case-top,.home-case-bottom{font-size:7px}
+  .home-case-title{font-size:clamp(43px,12vw,76px);max-width:90%}
+  .home-case-orbit{width:34%;right:5%;top:24%}
+  .home-case-orbit span{width:34px;height:34px;font-size:18px}
+}
