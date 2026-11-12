@@ -1,26 +1,29 @@
 ---
 layout: default
 ---
-<main class="project-detail">
+<main class="project-detail project-assises">
   <div class="detail-top"><a href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a><span>{{ page.year }} / {{ page.category }}</span></div>
   <section class="detail-hero">
     <p class="eyebrow">ÉTUDE DE PROJET — {{ page.year }}</p>
     <h1>{{ page.title }}</h1>
-    {% if page.cover %}<img class="detail-cover" src="{{ page.cover | relative_url }}" alt="{{ page.title | escape }}">{% endif %}
     <p class="detail-summary">{{ page.summary }}</p>
     {% if page.title contains "Assises" %}
-    <div class="case-visual" aria-label="Repères clés du projet">
-      <div class="case-visual-top"><span>DIJON · JUIN 2026</span><span>PROJET 01 / 01</span></div>
-      <div class="case-visual-main">
-        <div class="case-orbit"><span>ÉNERGIE<br>EN MOUVEMENT</span><i></i><b></b></div>
-        <div class="case-visual-title">FAIRE<br><em>BOUGER</em><br>LES LIGNES<span>✳</span></div>
+    <div class="case-visual" aria-label="Univers graphique des Assises 2026 à Dijon">
+      <img class="case-bear-photo" src="https://franceurbaine.org/app/uploads/2026/05/Annonce-AETE-elus-pour-France-Urbaine-1024x649.jpg" alt="Ours polaire de Dijon, visuel de mobilisation des Assises 2026">
+      <div class="case-visual-shade"></div>
+      <div class="case-visual-top"><span>DIJON · 23—25 JUIN 2026</span><span>27e ÉDITION</span></div>
+      <div class="case-visual-copy">
+        <span class="case-kicker">TRANSITION ÉNERGÉTIQUE</span>
+        <strong>MOBILISATION<br><em>GÉNÉRALE.</em></strong>
+        <p>Trois jours pour faire avancer<br>la transition des territoires.</p>
       </div>
-      <div class="case-visual-bottom"><span>27<sup>e</sup> ÉDITION</span><span>TRANSITION ÉNERGÉTIQUE</span><span>3 JOURS</span></div>
+      <div class="case-visual-bottom"><span>PARC DES EXPOSITIONS & OPÉRA DE DIJON</span><span>ÉCHANGER · AGIR · TRANSFORMER</span></div>
+      <a class="case-image-credit" href="https://franceurbaine.org/actualites/dijon-2026-les-assises-europeennes-de-la-transition-energetique-au-coeur-de-laction-des-territoires/" target="_blank" rel="noreferrer">VISUEL DE L’ÉDITION 2026 · SOURCE FRANCE URBAINE</a>
     </div>
     <div class="case-stats">
       <div><strong>27<sup>e</sup></strong><span>ÉDITION</span></div>
       <div><strong>03</strong><span>JOURS D’ÉVÉNEMENT</span></div>
-      <div><strong>03</strong><span>OBJECTIF DE LABELLISATION ÉCO-MANIFESTATION</span></div>
+      <div><strong>NIVEAU 3</strong><span>LABEL ÉCO-MANIFESTATION OBTENU</span></div>
     </div>
     {% endif %}
   </section>
