@@ -74,6 +74,66 @@ layout: default
     <div class="creative-gallery-footer"><span>CRÉER · EXPÉRIMENTER · RECOMMENCER</span><span>UNE COLLECTION EN CONSTRUCTION ↗</span></div>
   </section>
 </main>
+{% elsif page.title contains "Faire vivre la résidence" or page.title contains "CROUS" %}
+<main class="crous-life">
+  <div class="project-signature-band signature-crous" aria-label="Signature graphique du projet">
+    <span class="signature-band-label">CROUS ORLÉANS <i>✳</i> VIE ÉTUDIANTE</span>
+    <span class="signature-mark"><strong class="signature-monogram" aria-label="MC">MC</strong><span class="signature-sun" aria-hidden="true"><i></i></span></span>
+    <span class="signature-band-index">CULTURE · LIEN · CRÉATION</span>
+  </div>
+  <div class="crous-grain" aria-hidden="true"></div>
+  <header class="crous-topbar">
+    <a href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a>
+    <span>ORLÉANS / SERVICE CIVIQUE / 8 MOIS</span>
+    <span>2025—2026</span>
+  </header>
+  <section class="crous-hero">
+    <div class="crous-hero-copy">
+      <p class="crous-kicker"><span></span> ANIMER · IMAGINER · RASSEMBLER</p>
+      <p class="crous-introline">UNE RÉSIDENCE, DES RENCONTRES, DES IDÉES.</p>
+      <h1>FAIRE VIVRE<br><em>LA RÉSIDENCE.</em></h1>
+      <div class="crous-hero-bottom">
+        <p>Huit mois au cœur de la vie étudiante, à imaginer des moments qui rapprochent et à faire circuler les idées.</p>
+        <span class="crous-stamp">CULTURE<br><b>EN</b><br>MOUVEMENT ✳</span>
+      </div>
+    </div>
+    <div class="crous-hero-art" aria-hidden="true">
+      <div class="crous-orbit crous-orbit-one"></div><div class="crous-orbit crous-orbit-two"></div>
+      <div class="crous-sunburst">✳</div>
+      <div class="crous-poster crous-poster-one"><small>ON SE RETROUVE</small><strong>ÇA<br>BOUGE<br>ICI.</strong><span>VIE DE RÉSIDENCE / ORLÉANS</span></div>
+      <div class="crous-poster crous-poster-two"><small>LE PROGRAMME</small><strong>PLACE<br>AU<br>COLLECTIF</strong><span>RENCONTRER · PARTAGER</span></div>
+      <span class="crous-floating-note">MAKE<br>ROOM<br>FOR IDEAS ↗</span>
+    </div>
+    <div class="crous-hero-foot"><span>ANIMATION DE LA VIE ÉTUDIANTE</span><span>SCROLL POUR DÉCOUVRIR ↓</span></div>
+  </section>
+  <section class="crous-story">
+    <div class="crous-story-index"><span>01 / LE DÉCLIC</span><span>UNE EXPÉRIENCE FONDATRICE</span></div>
+    <div class="crous-story-grid">
+      <h2>LE DÉBUT<br>DE QUELQUE<br><em>CHOSE.</em></h2>
+      <div class="crous-story-copy">
+        <p class="crous-story-lead">C’est au CROUS que j’ai commencé à découvrir le plaisir de donner une forme concrète aux idées.</p>
+        <p>En faisant vivre la résidence, j’ai pu mêler animation, organisation et communication. Imaginer des rendez-vous, créer des occasions de se retrouver, réfléchir à la manière de donner envie de participer… autant de petites expériences qui ont progressivement éveillé mon intérêt pour la création visuelle et le design.</p>
+        <p>Cette expérience a marqué un tournant dans mon parcours : elle m’a donné l’envie d’explorer davantage la communication, l’image et la conception de projets.</p>
+      </div>
+    </div>
+    <div class="crous-story-ribbon"><span>UNE IDÉE PREND FORME</span><b>✳</b><span>UN VISUEL ATTIRE L’ŒIL</span><b>✳</b><span>UN ÉVÉNEMENT RASSEMBLE</span><b>✳</b><span>LE LIEN SE CRÉE</span></div>
+  </section>
+  <section class="crous-missions">
+    <div class="crous-section-heading"><p class="crous-kicker"><span></span> 02 / SUR LE TERRAIN</p><h2>FAIRE, FAIRE<br><em>ENSEMBLE.</em></h2><p>Un rôle au croisement de l’animation, de la culture et de la communication.</p></div>
+    <div class="crous-mission-grid">
+      <article class="crous-mission-card crous-mission-orange"><span>01 / ANIMER</span><strong>Créer des<br>occasions de<br>se rencontrer.</strong><p>Imaginer et organiser des temps de rencontre pour faire vivre la résidence et encourager les échanges entre étudiants.</p><i>✳</i></article>
+      <article class="crous-mission-card crous-mission-blue"><span>02 / CULTIVER</span><strong>Faire place<br>aux projets<br>culturels.</strong><p>Contribuer à la programmation culturelle et proposer des activités qui donnent envie de participer.</p><i>✳</i></article>
+      <article class="crous-mission-card crous-mission-pink"><span>03 / COMMUNIQUER</span><strong>Donner envie<br>de prendre<br>part.</strong><p>Relayer les activités et les rendez-vous de la résidence, notamment sur Instagram.</p><i>✳</i></article>
+    </div>
+  </section>
+  <section class="crous-visual-note">
+    <div class="crous-visual-note-mark">MC<span>✳</span></div>
+    <div><p>03 / CE QUE J’EN GARDE</p><h2>DE L’IDÉE<br>À <em>L’IMAGE.</em></h2></div>
+    <p>Une première porte ouverte sur la création : comprendre comment une intention devient un message, comment une image attire l’attention et comment la communication peut faire vivre un projet collectif.</p>
+  </section>
+  <article class="crous-content">{{ content }}</article>
+  <footer class="crous-footer"><span>CROUS ORLÉANS / 2025—2026</span><strong>FAIRE VIVRE<br><em>LE COLLECTIF.</em></strong><a href="{{ '/' | relative_url }}#projets">RETOUR AUX PROJETS ↗</a></footer>
+</main>
 {% elsif page.title contains "TIAM" %}
 <main class="tiam-world">
   <div class="project-signature-band signature-tiam" aria-label="Signature graphique du projet">
