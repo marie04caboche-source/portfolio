@@ -225,7 +225,7 @@
         const range = Math.max(1, page.offsetHeight - window.innerHeight);
         const progress = Math.max(0, Math.min(1, -rect.top / range));
         band.style.setProperty("--signature-progress", progress.toFixed(3));
-        band.style.setProperty("--signature-hue", String(Math.round(progress * 150)));
+        band.style.setProperty("--signature-hue", Math.round(progress * 150) + "deg");
         if (band.classList.contains("signature-tiam")) {
           const mark = band.querySelector(".signature-court-mark");
           if (mark) mark.style.transform = "translate(-50%,-50%) rotate(" + (progress * 24 - 12) + "deg) scale(" + (1 + progress * .12) + ")";
