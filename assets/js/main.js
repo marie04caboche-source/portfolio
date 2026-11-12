@@ -41,4 +41,20 @@
     }, { threshold: 0.4 });
     document.querySelectorAll(".tattoo-art").forEach((art) => tattooObserver.observe(art));
   }
+
+  // Assises universe: subtle image depth on pointer devices, disabled on touch/reduced motion.
+  const assisesHero = document.querySelector(".assises-hero");
+  const assisesImage = document.querySelector(".assises-hero-image");
+  if (assisesHero && assisesImage && window.matchMedia("(hover: hover) and (pointer: fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    assisesHero.addEventListener("pointermove", (event) => {
+      const rect = assisesHero.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+      assisesImage.style.transform = "scale(1.07) translate(" + (x * -12) + "px," + (y * -9) + "px)";
+    });
+    assisesHero.addEventListener("pointerleave", () => {
+      assisesImage.style.transform = "scale(1.035)";
+    });
+  }
+
 })();
