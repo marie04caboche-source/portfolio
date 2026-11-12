@@ -251,3 +251,40 @@
  .signature-words strong{font-size:clamp(58px,17vw,94px);margin:11px 0 13px}
  .signature-pre,.signature-caption{font-size:8px;letter-spacing:.15em}
 }
+
+
+/* Six real tattoo references, traced as fine linework and revealed interactively */
+.about-hero,.about-intro,.about-method,.about-toolbox{position:relative;isolation:isolate;overflow:hidden}
+.about-hero > :not(.tattoo-art),.about-intro > :not(.tattoo-art),.about-method > :not(.tattoo-art),.about-toolbox > :not(.tattoo-art){position:relative;z-index:2}
+.tattoo-art{position:absolute;z-index:1;display:block;pointer-events:auto;cursor:crosshair;opacity:.19;transition:opacity .45s ease,filter .45s ease,transform .55s cubic-bezier(.2,.75,.25,1);filter:grayscale(1);outline:none}
+.tattoo-svg{display:block;width:100%;height:100%;overflow:visible}
+.tattoo-svg g{fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.tattoo-svg path,.tattoo-svg circle{vector-effect:non-scaling-stroke;stroke-dasharray:var(--path-length,1200);stroke-dashoffset:var(--path-length,1200);transition:stroke-dashoffset 1.2s cubic-bezier(.55,.05,.2,1)}
+.tattoo-art.is-lit{opacity:.9;filter:drop-shadow(0 0 5px currentColor) drop-shadow(0 0 13px currentColor);transform:translateY(-4px)}
+.tattoo-art.is-lit .tattoo-svg path,.tattoo-art.is-lit .tattoo-svg circle{stroke-dashoffset:0}
+.tattoo-scorpion{width:clamp(145px,19vw,250px);height:clamp(175px,24vw,300px);right:5%;top:26%;color:#d7ff36;transform:rotate(5deg)}
+.tattoo-koi{width:clamp(190px,27vw,350px);height:clamp(120px,18vw,220px);right:3%;top:10%;color:#4d63ff;transform:rotate(-5deg)}
+.tattoo-pair{position:absolute;right:4%;top:12%;width:clamp(200px,27vw,340px);height:clamp(125px,18vw,220px);z-index:1;display:flex;align-items:center;gap:2%;pointer-events:none}
+.tattoo-pair .tattoo-art{position:relative;inset:auto;width:49%;height:100%;pointer-events:auto}
+.tattoo-sun{color:#d7ff36}
+.tattoo-moon{color:#ff5e8a}
+.tattoo-phoenix{width:clamp(150px,21vw,265px);height:clamp(235px,32vw,400px);right:3%;top:9%;color:#ff5e8a;transform:rotate(4deg)}
+.about-signature{margin-top:0}
+.signature-words{font-family:Georgia,serif}
+.signature-words span{font-family:Georgia,serif;font-style:italic;font-size:clamp(20px,2.6vw,32px);letter-spacing:.16em}
+.signature-words strong{font-family:Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(75px,12vw,155px);letter-spacing:-.075em}
+@media(hover:hover){
+ .tattoo-art:hover{opacity:.92;filter:drop-shadow(0 0 6px currentColor) drop-shadow(0 0 16px currentColor)}
+ .tattoo-art:hover .tattoo-svg path,.tattoo-art:hover .tattoo-svg circle{stroke-dashoffset:0}
+}
+@media(max-width:700px){
+ .tattoo-scorpion{width:105px;height:130px;right:-8px;top:30%;opacity:.12}
+ .tattoo-koi{width:145px;height:95px;right:-15px;top:6%;opacity:.12}
+ .tattoo-pair{width:150px;height:100px;right:-10px;top:5%;opacity:.12}
+ .tattoo-phoenix{width:105px;height:175px;right:-8px;top:5%;opacity:.12}
+ .signature-words span{font-size:14px}
+ .signature-words strong{font-size:clamp(55px,16vw,90px)}
+}
+@media(prefers-reduced-motion:reduce){
+ .tattoo-art,.tattoo-svg path,.tattoo-svg circle{transition:none!important}
+}
