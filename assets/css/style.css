@@ -1402,3 +1402,36 @@ a.project-card:focus-visible .home-case-art:before{
  .tiam-footer{padding:20px 6vw;font-size:7px}.tiam-footer span{max-width:45%}
 }
 @media(prefers-reduced-motion:reduce){.tiam-world *,.tiam-world *:before,.tiam-world *:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+
+/* TIAM — international presence and court-inspired editorial section */
+.tiam-worldwide{position:relative;isolation:isolate;overflow:hidden;padding:105px 7vw 80px;background:#17171d;color:#f4f1eb}
+.tiam-worldwide:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(112deg,#17171d 0 57%,#24243b 57% 100%)}
+.tiam-worldwide:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.18;background:repeating-linear-gradient(0deg,transparent 0 38px,#fff 39px,#fff 40px),repeating-linear-gradient(90deg,transparent 0 38px,#fff 39px,#fff 40px);mask-image:linear-gradient(90deg,transparent,#000 60%,transparent)}
+.tiam-worldwide-orbit{position:absolute;right:-8vw;top:-17vw;width:58vw;aspect-ratio:1;border:1px solid #ff477e80;border-radius:50%;box-shadow:0 0 0 24px #ff477e0c,0 0 0 65px #5368ff12,0 0 0 115px #d7ff3809;z-index:-1;animation:tiam-ring-spin 55s linear infinite}
+.tiam-worldwide-orbit i{position:absolute;inset:16%;border:1px dashed #ffffff55;border-radius:50%}
+.tiam-worldwide-orbit i:nth-child(2){inset:33%;border-style:solid;border-color:#d7ff3877}
+.tiam-worldwide-orbit i:nth-child(3){inset:48%;border-color:#5368ff}
+.tiam-worldwide-head{display:grid;grid-template-columns:1.1fr .9fr;gap:6vw;align-items:end;position:relative;z-index:1}
+.tiam-worldwide-head .tiam-kicker{grid-column:1/-1;color:#c4c1c5}
+.tiam-worldwide-head h2{font-size:clamp(58px,9vw,125px);line-height:.78;letter-spacing:-.105em;margin:0;font-weight:950}
+.tiam-worldwide-head h2 em{font-style:normal;color:var(--tiam-acid);text-shadow:4px 4px 0 var(--tiam-pink)}
+.tiam-worldwide-head>p:last-child{max-width:355px;color:#c4c1c5;font-size:14px;line-height:1.65;margin:0 0 5px}
+.tiam-country-line{margin-top:75px;border-top:1px solid #ffffff55;border-bottom:1px solid #ffffff55;padding:18px 0;display:grid;grid-template-columns:.7fr 2fr .8fr;gap:20px;align-items:center;position:relative;z-index:1}
+.tiam-country-label,.tiam-country-end{font:9px var(--mono);letter-spacing:.12em;color:#aaa}
+.tiam-country-end{text-align:right;color:var(--tiam-acid)}
+.tiam-country-list{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.tiam-country-list span{font-size:clamp(17px,2.3vw,30px);font-weight:950;letter-spacing:-.06em;position:relative;transition:color .3s,transform .3s}
+.tiam-country-list span:before{content:attr(data-country);font:8px var(--mono);letter-spacing:.08em;color:var(--tiam-pink);position:absolute;top:-13px;left:1px}
+.tiam-country-list span:hover{color:var(--tiam-acid);transform:translateY(-5px) skewX(-7deg)}
+.tiam-court-signature{display:flex;justify-content:flex-end;align-items:baseline;gap:16px;margin-top:50px;font-weight:950;font-size:clamp(27px,5vw,65px);letter-spacing:-.09em;line-height:.9;transform:skewX(-8deg);position:relative;z-index:1}
+.tiam-court-signature span{color:transparent;-webkit-text-stroke:1px #f4f1eb}
+.tiam-court-signature b{color:var(--tiam-pink)}
+@media(max-width:760px){
+ .tiam-worldwide{padding:75px 6vw 60px}
+ .tiam-worldwide-head{display:block}.tiam-worldwide-head .tiam-kicker{margin-bottom:28px}.tiam-worldwide-head h2{font-size:clamp(56px,14vw,85px)}.tiam-worldwide-head>p:last-child{margin-top:25px;font-size:13px}
+ .tiam-worldwide-orbit{width:95vw;right:-40vw;top:-12vw}
+ .tiam-country-line{margin-top:48px;grid-template-columns:1fr;gap:20px}
+ .tiam-country-list{justify-content:flex-start;gap:18px 25px}.tiam-country-end{text-align:left}
+ .tiam-court-signature{justify-content:flex-start;flex-wrap:wrap;gap:8px;font-size:clamp(27px,7vw,42px);margin-top:35px}
+}
