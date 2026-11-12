@@ -1,23 +1,48 @@
 ---
-title: "Assises Européennes de la Transition Énergétique"
-category: "Événementiel"
+layout: project
+title: "27e Assises Européennes de la Transition Énergétique"
+category: "ÉVÉNEMENTIEL · COMMUNICATION"
 year: "2026"
-summary: "Trois jours de rencontres et de mobilisation autour de la transition énergétique, au cœur de l'organisation de la 27e édition à Dijon."
+summary: "Trois jours de rencontres et d’échanges autour de la transition énergétique, au cœur d’un événement professionnel d’envergure européenne organisé à Dijon."
 cover: ""
 featured: true
-role: "Appui à l'organisation, coordination logistique et partenaires, communication visuelle"
-tools: "Gestion de projet · Événementiel · Création graphique · Coordination"
+role: "Assistante à l’organisation — coordination, logistique, communication et création graphique"
+tools: "Gestion de projet · Coordination partenaires et prestataires · Création graphique · Communication événementielle · Suivi logistique"
 ---
-## Le projet
 
-La 27e édition des Assises Européennes de la Transition Énergétique s'est tenue à Dijon du 23 au 25 juin 2026. Un événement d'envergure réunissant de nombreux acteurs engagés dans la transition énergétique.
+## Un événement, mille détails à coordonner
+
+Du 23 au 25 juin 2026, Dijon Métropole a accueilli la 27e édition des Assises Européennes de la Transition Énergétique. Pendant trois jours, collectivités, experts, acteurs économiques et institutionnels se sont retrouvés pour échanger autour des enjeux de la transition énergétique.
+
+J’ai intégré l’équipe organisatrice en appui à la préparation et au déroulement de cet événement, avec des missions transversales mêlant coordination, logistique et communication.
 
 ## Mes missions
 
-J'ai participé à la préparation et au déroulement de l'événement : suivi logistique, coordination avec les partenaires et prestataires, accompagnement des congressistes et contribution à la communication.
+### Coordonner et organiser
 
-J'ai également conçu la grande majorité des supports visuels de l'événement et participé à l'organisation de plusieurs temps forts, dont la soirée de gala et les visites de sites.
+- Participer au suivi logistique de l’événement et à la préparation de ses différents temps forts.
+- Assurer le lien avec les partenaires, prestataires, congressistes et interlocuteurs internes.
+- Contribuer à l’organisation de la restauration et du dîner officiel.
+- Prendre part aux réunions de coordination avec les agences, les partenaires, le protocole, les cabinets et les intervenants.
 
-## Ce que j'en retiens
+### Imaginer et créer les supports
 
-Une expérience très complète, à la croisée de la gestion de projet, de la communication et de l'événementiel, qui m'a permis de gagner en autonomie et de prendre part à un projet porteur de sens.
+- Réaliser près de 95 % des visuels produits par l’équipe pour l’événement.
+- Concevoir et adapter les supports graphiques aux différents besoins de communication.
+- Participer à la publication de contenus, notamment sur YouTube.
+
+### Être sur le terrain
+
+- Accompagner l’organisation des visites de sites proposées aux congressistes.
+- Participer au suivi du label Éco-Manifestation, avec un objectif de niveau 3.
+- Contribuer à la coordination des équipes et au bon déroulement des séquences sur place, jusqu’à la soirée de gala.
+
+## Une expérience qui fait sens
+
+Cette immersion m’a permis de découvrir concrètement les exigences d’un événement professionnel de grande ampleur : anticiper, organiser, communiquer, coordonner et savoir s’adapter aux imprévus.
+
+J’ai particulièrement apprécié la diversité des missions et l’autonomie accordée, avec la possibilité de passer de la création graphique au suivi opérationnel. Cette expérience confirme mon intérêt pour la gestion de projet et l’événementiel, tout en donnant du sens à mon envie de contribuer à des projets liés à la transition écologique et aux territoires.
+
+## En images
+
+Les supports de communication, les coulisses et les temps forts de l’événement viendront illustrer ce projet.
