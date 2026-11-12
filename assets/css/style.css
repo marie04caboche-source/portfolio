@@ -2301,3 +2301,10 @@ a.project-card:focus-visible .home-case-art:before{
 .media-footer:before{content:"";position:absolute;width:42vw;height:42vw;border:1px solid #17151b55;border-radius:50%;right:-10vw;top:-24vw;box-shadow:0 0 0 30px #ffffff20,0 0 0 75px #3548ff13;animation:media-orbit-drift 20s ease-in-out infinite alternate}
 .media-footer>*{position:relative;z-index:1}
 @media(prefers-reduced-motion:reduce){.media-hero:after,.media-footer:before{animation:none!important}}
+
+
+/* CROUS — signature étoilée accordée à la palette de la page */
+.theme-crous .site-nav .brand span{
+  color:#f7d94c;
+  text-shadow:1px 1px 0 #f45b83,0 0 12px #f7d94c55;
+}
