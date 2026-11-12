@@ -42,7 +42,14 @@ title: Accueil
           {% if project.cover and project.cover != "" %}
             <img src="{{ project.cover | relative_url }}" alt="{{ project.title | escape }}">
           {% else %}
-            {% if project.title contains "Assises" %}
+            {% if project.title contains "Faire vivre la résidence" %}
+              <div class="home-crous-art">
+                <div class="home-crous-top"><span>CROUS ORLÉANS</span><span>2025—26</span></div>
+                <div class="home-crous-star">✳</div>
+                <div class="home-crous-title">FAIRE VIVRE<br><em>LA RÉSIDENCE.</em></div>
+                <div class="home-crous-bottom"><span>CULTURE · RENCONTRES</span><span>8 MOIS POUR CRÉER DU LIEN</span></div>
+              </div>
+            {% elsif project.title contains "Assises" %}
               <div class="home-case-art">
                 <div class="home-case-top"><span>DIJON · JUIN 2026</span><span>27e ÉDITION</span></div>
                 <div class="home-case-title">MOBILISATION<br><em>GÉNÉRALE.</em></div>
