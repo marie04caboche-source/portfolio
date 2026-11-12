@@ -63,3 +63,69 @@
 .home-case-orbit b{background:var(--acid);top:auto;right:auto;bottom:9%;left:20%;width:7px;height:7px}
 .project-card:hover .home-case-orbit{transform:rotate(0deg) scale(1.08)}
 @media(max-width:700px){.home-case-art{padding:17px}.home-case-top,.home-case-bottom{font-size:7px}.home-case-title{font-size:clamp(48px,13vw,78px)}.home-case-orbit{width:37%;right:5%;top:25%}}
+
+/* About — a personal editorial chapter */
+.about-page{background:#f5f1e9}
+.about-hero{min-height:calc(88svh - 72px);background:#ff5e8a;color:#171717;padding:25px 5vw 0;display:flex;flex-direction:column;overflow:hidden}
+.about-hero-top,.about-index,.about-eyebrow,.about-hero-band,.about-stamp,.method-grid article>span,.toolbox-software>span,.about-timeline>div>span,.about-back{font:10px var(--mono);letter-spacing:.1em}
+.about-hero-top{display:flex;justify-content:space-between;gap:15px}
+.about-hero-main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:8vh 0 7vh}
+.about-eyebrow{margin:0 0 22px}
+.about-hero h1{font-size:clamp(90px,19vw,260px);line-height:.72;letter-spacing:-.115em;margin:0;font-weight:800}
+.about-hero h1 em{font-style:normal;color:#d7ff36}
+.about-hero-bottom{display:flex;align-items:end;justify-content:space-between;margin-top:7vh}
+.about-hero-bottom>p{font-size:clamp(15px,2vw,23px);line-height:1.35;font-weight:600}
+.about-stamp{width:112px;height:112px;border:1px solid #171717;border-radius:50%;display:grid;place-content:center;text-align:center;transform:rotate(10deg);line-height:1.6}
+.about-hero-band{background:#171717;color:#f5f1e9;margin:0 -5.3vw;padding:14px 5vw;white-space:nowrap}
+.about-hero-band b{color:#d7ff36;padding:0 20px}
+.about-intro,.about-method,.about-toolbox,.about-path{padding:100px 9vw}
+.about-index{border-top:1px solid #17171744;padding-top:13px}
+.about-intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:9vw;align-items:end;padding-top:85px}
+.about-intro h2,.about-method h2,.toolbox-heading h2,.about-path h2,.about-next h2{font-size:clamp(54px,8.5vw,118px);line-height:.86;letter-spacing:-.09em;margin:0}
+.about-intro h2 em,.about-method h2 em,.toolbox-heading h2 em,.about-path h2 em,.about-next h2 em{font-style:normal;color:#4d63ff}
+.about-prose{max-width:530px;font-size:15px;line-height:1.8}
+.about-prose p{margin:0 0 18px}
+.about-prose .about-lead{font-size:21px;line-height:1.45;font-weight:700}
+.about-method{background:#4d63ff;color:#fff}
+.about-method .about-index,.about-toolbox .about-index,.about-path .about-index{border-color:#ffffff66}
+.about-method h2{padding:75px 0 55px}
+.about-method h2 em{color:#d7ff36}
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #ffffff66}
+.method-grid article{padding:24px 20px 10px 0;border-right:1px solid #ffffff44}
+.method-grid article+article{padding-left:20px}
+.method-grid article:last-child{border:0}
+.method-grid article>span{color:#d7ff36}
+.method-grid h3{font-size:19px;letter-spacing:-.04em;margin:40px 0 12px}
+.method-grid p{font-size:13px;line-height:1.65;color:#e5e6ff;max-width:230px}
+.about-toolbox{background:#d7ff36}
+.toolbox-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;padding:80px 0 55px}
+.toolbox-heading h2 em{color:#ff5e8a}
+.toolbox-heading>p{max-width:280px;font-size:14px;line-height:1.6}
+.toolbox-tags{display:flex;flex-wrap:wrap;gap:10px}
+.toolbox-tags span{border:1px solid #17171777;border-radius:100px;padding:13px 17px;font:10px var(--mono);letter-spacing:.04em;transition:background .2s,color .2s,transform .2s}
+.toolbox-tags span:hover{background:#171717;color:#d7ff36;transform:translateY(-3px)}
+.toolbox-software{display:grid;grid-template-columns:.5fr 1.5fr;border-top:1px solid #17171755;margin-top:65px;padding-top:20px;align-items:baseline}
+.toolbox-software>span{font-family:var(--mono)}
+.toolbox-software p{font-size:14px;font-weight:600}
+.about-path{background:#171717;color:#f5f1e9}
+.about-path .about-index{border-color:#ffffff55}
+.about-path h2{padding:80px 0}
+.about-path h2 em{color:#ff5e8a}
+.about-timeline{border-top:1px solid #ffffff55}
+.about-timeline>div{display:grid;grid-template-columns:.8fr 1fr 1.4fr;gap:20px;align-items:baseline;padding:22px 0;border-bottom:1px solid #ffffff44}
+.about-timeline>div>span{color:#d7ff36}
+.about-timeline strong{font-size:17px}
+.about-timeline p{font-size:13px;line-height:1.6;color:#c9c9c9;margin:0}
+.about-next{background:#f5f1e9;padding:100px 9vw}
+.about-next h2{font-size:clamp(60px,10vw,145px);padding:65px 0 35px}
+.about-next h2 em{color:#ff5e8a}
+.about-next>p:not(.about-index){max-width:550px;font-size:17px;line-height:1.7}
+.about-next>a{display:inline-flex;gap:25px;margin-top:30px;padding-bottom:9px;border-bottom:1px solid;font:11px var(--mono)}
+.about-next>a span{color:#4d63ff}
+.about-back{padding:20px 9vw;display:flex;justify-content:space-between;border-top:1px solid #17171733}
+@media(max-width:700px){
+ .about-hero{min-height:80svh;padding:20px 5vw 0}.about-hero-top{font-size:8px}.about-hero-top span:last-child{max-width:42%;text-align:right}.about-hero h1{font-size:clamp(83px,21vw,145px)}.about-hero-bottom{margin-top:8vh}.about-stamp{width:88px;height:88px;font-size:8px}
+ .about-intro,.about-method,.about-toolbox,.about-path,.about-next{padding:75px 6vw}.about-intro-grid{grid-template-columns:1fr;gap:35px;padding-top:60px}.about-intro h2,.about-method h2,.toolbox-heading h2,.about-path h2{font-size:clamp(54px,14vw,86px)}
+ .about-method h2{padding:60px 0 40px}.method-grid{grid-template-columns:1fr 1fr}.method-grid article{padding:20px 12px 15px 0}.method-grid article+article{padding-left:12px}.method-grid article:nth-child(2){border-right:0}.method-grid article:nth-child(3){padding-left:0;border-top:1px solid #ffffff44}.method-grid article:nth-child(4){border-top:1px solid #ffffff44}.method-grid h3{margin:25px 0 8px;font-size:16px}
+ .toolbox-heading{display:block;padding:60px 0 35px}.toolbox-heading>p{margin-top:25px}.toolbox-tags{gap:7px}.toolbox-tags span{font-size:8px;padding:11px 12px}.toolbox-software{grid-template-columns:1fr;gap:5px;margin-top:45px}.about-path h2{padding:60px 0}.about-timeline>div{grid-template-columns:1fr 1fr;gap:8px}.about-timeline>div p{grid-column:2}.about-next h2{font-size:clamp(60px,15vw,100px);padding:55px 0 25px}.about-back{padding:18px 6vw;font-size:8px;gap:15px}
+}
