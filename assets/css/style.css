@@ -377,3 +377,50 @@
     letter-spacing: .15em;
   }
 }
+
+
+/* Assises 2026 — identité inspirée des supports de l'édition dijonnaise */
+.project-assises .detail-hero{padding-top:55px}
+.project-assises .detail-hero h1{max-width:1050px}
+.case-visual{min-height:clamp(390px,48vw,620px);margin:42px 0 0;padding:24px 3.2vw 20px;position:relative;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;color:#fff;background:linear-gradient(115deg,#1caf80 0%,#12b8b2 54%,#0caaa9 100%)}
+.case-bear-photo{position:absolute;z-index:-2;inset:0 auto 0 0;width:67%;height:100%;object-fit:cover;object-position:left center;mix-blend-mode:multiply;filter:saturate(.88) contrast(1.05)}
+.case-visual-shade{position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(12,170,145,.02) 0%,rgba(12,170,145,.12) 31%,rgba(17,181,173,.86) 52%,#10b6ad 100%),linear-gradient(0deg,rgba(0,65,67,.38),transparent 34%)}
+.case-visual-top,.case-visual-bottom{display:flex;justify-content:space-between;gap:14px;position:relative;z-index:2;font:10px var(--mono);letter-spacing:.11em}
+.case-visual-copy{position:relative;z-index:2;align-self:flex-end;width:59%;margin:auto 0 auto auto;padding:45px 0 35px 2vw}
+.case-kicker{display:block;font:11px var(--mono);letter-spacing:.16em;margin-bottom:22px}
+.case-visual-copy strong{display:block;font-size:clamp(42px,7.4vw,105px);line-height:.84;letter-spacing:-.085em;font-weight:800}
+.case-visual-copy strong em{font-style:normal;color:#d8ff55}
+.case-visual-copy p{font-size:clamp(14px,1.7vw,20px);line-height:1.45;font-weight:600;margin:28px 0 0}
+.case-image-credit{position:absolute;right:3.2vw;bottom:52px;font:8px var(--mono);letter-spacing:.05em;opacity:.8;text-decoration:underline;text-underline-offset:3px}
+.case-stats{display:grid;grid-template-columns:repeat(3,1fr);background:#d8ff55;margin:0 0 65px;color:#123e35}
+.case-stats>div{padding:24px 25px;display:flex;flex-direction:column;gap:8px;border-right:1px solid #123e3533}
+.case-stats>div:last-child{border:0}
+.case-stats strong{font-size:clamp(40px,6.7vw,82px);line-height:.9;letter-spacing:-.08em}
+.case-stats strong sup{font-size:.35em;vertical-align:top}
+.case-stats span{font:9px var(--mono);letter-spacing:.07em;line-height:1.5}
+.home-case-art{position:absolute;inset:0;overflow:hidden;background:linear-gradient(115deg,#1caf80,#12b8b2 62%,#0caaa9);color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:22px 24px;isolation:isolate}
+.home-case-art img{position:absolute;z-index:-2;inset:0 auto 0 0;width:68%;height:100%;object-fit:cover;object-position:left center;mix-blend-mode:multiply;filter:saturate(.9) contrast(1.04)}
+.home-case-overlay{position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(16,182,173,.18) 35%,rgba(16,182,173,.93) 62%,#10b6ad 100%),linear-gradient(0deg,#003f3b55,transparent 36%)}
+.home-case-top,.home-case-bottom{display:flex;justify-content:space-between;gap:10px;font:9px var(--mono);letter-spacing:.1em;position:relative;z-index:2}
+.home-case-title{align-self:flex-end;width:62%;font-size:clamp(30px,5.1vw,72px);font-weight:800;line-height:.83;letter-spacing:-.085em;position:relative;z-index:2}
+.home-case-title em{font-style:normal;color:#d8ff55}
+.home-case-art:before,.home-case-orbit{display:none}
+@media(max-width:700px){
+.case-visual{min-height:520px;padding:17px 5vw}
+.case-bear-photo{width:100%;height:58%;object-position:left center}
+.case-visual-shade{background:linear-gradient(180deg,rgba(13,170,145,.02) 0%,rgba(13,170,145,.1) 32%,#10b6ad 59%,#10b6ad 100%),linear-gradient(0deg,#004e4940,transparent 50%)}
+.case-visual-copy{width:100%;margin:auto 0 22px;padding:0}
+.case-kicker{font-size:9px;margin-bottom:13px}
+.case-visual-copy strong{font-size:clamp(48px,13vw,78px)}
+.case-visual-copy p{margin-top:15px;font-size:14px}
+.case-visual-bottom{font-size:7px;letter-spacing:.04em}
+.case-image-credit{right:5vw;bottom:45px;font-size:6px}
+.case-stats>div{padding:15px 10px;gap:7px}
+.case-stats strong{font-size:clamp(27px,8vw,43px)}
+.case-stats span{font-size:7px}
+.home-case-art{padding:17px}
+.home-case-art img{width:100%;height:62%;object-position:left center}
+.home-case-overlay{background:linear-gradient(180deg,transparent 0%,rgba(16,182,173,.12) 32%,#10b6ad 64%,#10b6ad 100%),linear-gradient(0deg,#003f3b55,transparent 45%)}
+.home-case-title{width:100%;font-size:clamp(42px,12vw,70px);margin-top:auto;margin-bottom:18px}
+.home-case-top,.home-case-bottom{font-size:7px}
+}
