@@ -194,19 +194,18 @@
     updateTiamScroll();
     if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
       const art = tiamPage.querySelector(".tiam-hero-art");
+      const rings = art?.querySelector(".tiam-speed-rings");
       art?.addEventListener("pointermove", (event) => {
         if (tiamFrame) cancelAnimationFrame(tiamFrame);
         tiamFrame = requestAnimationFrame(() => {
           const rect = art.getBoundingClientRect();
           const x = (event.clientX - rect.left) / rect.width - .5;
           const y = (event.clientY - rect.top) / rect.height - .5;
-          tiamPage.style.setProperty("--tiam-x", (x * 24).toFixed(1) + "px");
-          tiamPage.style.setProperty("--tiam-y", (y * 24).toFixed(1) + "px");
+          if (rings) rings.style.translate = (x * 14).toFixed(1) + "px " + (y * 14).toFixed(1) + "px";
         });
       });
       art?.addEventListener("pointerleave", () => {
-        tiamPage.style.setProperty("--tiam-x", "0px");
-        tiamPage.style.setProperty("--tiam-y", "0px");
+        if (rings) rings.style.translate = "";
       });
     }
   }
