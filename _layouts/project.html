@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% if page.title contains "Assises" %}
 <main class="project-detail project-assises assises-world">
   <section class="assises-hero" id="univers">
     <img class="assises-hero-image" src="https://franceurbaine.org/app/uploads/2026/05/Annonce-AETE-elus-pour-France-Urbaine-1024x649.jpg" alt="Affiche de la 27e édition des Assises Européennes de la Transition Énergétique à Dijon">
@@ -62,3 +63,17 @@ layout: default
     </div>
   </section>
 </main>
+{% else %}
+<main class="project-detail">
+  <div class="detail-top"><a href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a><span>{{ page.category }} · {{ page.year }}</span></div>
+  <section class="detail-hero">
+    <p class="eyebrow">{{ page.category }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.cover and page.cover != "" %}<img class="detail-cover" src="{{ page.cover | relative_url }}" alt="{{ page.title }}">{% endif %}
+    <p class="detail-summary">{{ page.summary }}</p>
+    <div class="detail-info"><div><small>MON RÔLE</small><p>{{ page.role }}</p></div><div><small>OUTILS & COMPÉTENCES</small><p>{{ page.tools }}</p></div></div>
+  </section>
+  <article class="detail-body">{{ content }}</article>
+  <a class="back-projects" href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a>
+</main>
+{% endif %}
