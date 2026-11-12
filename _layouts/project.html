@@ -27,6 +27,41 @@ layout: default
   <article class="detail-body">{{ content }}</article>
   <a class="back-projects" href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a>
 </main>
+{% elsif page.title contains "Explorations" %}
+<main class="creative-gallery-page">
+  <section class="creative-gallery" aria-label="Galerie des explorations créatives">
+    <div class="creative-gallery-texture" aria-hidden="true"></div>
+    <div class="creative-gallery-head">
+      <a class="creative-back" href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a>
+      <span>STUDIO / RECHERCHES & EXPÉRIMENTATIONS</span>
+    </div>
+    <header class="creative-gallery-intro">
+      <p class="creative-kicker">UN ESPACE POUR TESTER, ASSOCIER, DÉTOURNER.</p>
+      <h1>EXPLORATIONS<br><em>CRÉATIVES.</em></h1>
+      <p class="creative-gallery-lead">Une galerie en mouvement. Les projets viendront bientôt prendre leur place.</p>
+    </header>
+    <div class="creative-carousel" data-creative-carousel>
+      <button class="creative-arrow creative-arrow-prev" type="button" aria-label="Projet précédent">←</button>
+      <div class="creative-stage" aria-live="polite">
+        <article class="creative-slide is-active" data-slide="0" aria-label="Emplacement de projet 1">
+          <div class="creative-art creative-art-one" aria-hidden="true"><span class="art-orbit"></span><span class="art-disc"></span><span class="art-ribbon"></span><span class="art-cross">✳</span><span class="art-grid"></span></div>
+          <div class="creative-slide-caption"><span>EXPLORATION / 01</span><strong>À DÉCOUVRIR</strong><span>EN PRÉPARATION</span></div>
+        </article>
+        <article class="creative-slide" data-slide="1" aria-label="Emplacement de projet 2">
+          <div class="creative-art creative-art-two" aria-hidden="true"><span class="art-orbit"></span><span class="art-disc"></span><span class="art-ribbon"></span><span class="art-cross">✳</span><span class="art-grid"></span></div>
+          <div class="creative-slide-caption"><span>EXPLORATION / 02</span><strong>À DÉCOUVRIR</strong><span>EN PRÉPARATION</span></div>
+        </article>
+        <article class="creative-slide" data-slide="2" aria-label="Emplacement de projet 3">
+          <div class="creative-art creative-art-three" aria-hidden="true"><span class="art-orbit"></span><span class="art-disc"></span><span class="art-ribbon"></span><span class="art-cross">✳</span><span class="art-grid"></span></div>
+          <div class="creative-slide-caption"><span>EXPLORATION / 03</span><strong>À DÉCOUVRIR</strong><span>EN PRÉPARATION</span></div>
+        </article>
+      </div>
+      <button class="creative-arrow creative-arrow-next" type="button" aria-label="Projet suivant">→</button>
+      <div class="creative-carousel-bottom"><span class="creative-counter"><b>01</b> / 03</span><div class="creative-progress" aria-hidden="true"><i></i></div><span class="creative-hint">FAIRE DÉFILER POUR EXPLORER</span></div>
+    </div>
+    <div class="creative-gallery-footer"><span>CRÉER · EXPÉRIMENTER · RECOMMENCER</span><span>UNE COLLECTION EN CONSTRUCTION ↗</span></div>
+  </section>
+</main>
 {% else %}
 <main class="project-detail">
   <div class="detail-top"><a href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a><span>{{ page.category }} · {{ page.year }}</span></div>
