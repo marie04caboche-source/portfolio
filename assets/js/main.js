@@ -215,7 +215,7 @@
 
   // Shared project signature: the MC monogram and motif react to page progress.
   document.querySelectorAll(".project-signature-band").forEach((band) => {
-    const page = band.closest(".creative-gallery, .tiam-world");
+    const page = band.closest(".creative-gallery, .tiam-world, .crous-life");
     if (!page) return;
     let frame = null;
     const updateSignature = () => {
