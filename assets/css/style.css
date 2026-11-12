@@ -143,7 +143,6 @@
 .about-toolbox .tattoo-koi{width:clamp(190px,27vw,350px);height:clamp(130px,18vw,230px);right:3%;top:6%;opacity:.14;background-repeat:no-repeat;background-size:contain;background-position:center;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 190' fill='none' stroke='%23171717' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M26 98C48 50 112 42 153 79 178 102 204 105 232 83 222 120 189 143 151 132 113 121 91 88 58 92 45 94 35 102 26 115ZM153 79L183 44 190 78M153 132L184 162 190 132M65 92Q84 112 108 115M104 66Q120 86 139 92M105 133Q125 111 143 109M232 83L245 69M232 83L247 96'/%3E%3Ccircle cx='54' cy='92' r='3'/%3E%3C/svg%3E")}
 .about-path .tattoo-phoenix-path{width:clamp(180px,24vw,310px);height:clamp(190px,26vw,340px);right:2%;top:12%;opacity:.12;transform:rotate(8deg)}
 .about-next{overflow:hidden}
-.about-next:after{content:"☼";position:absolute;right:5%;bottom:-20%;font:clamp(180px,32vw,430px)/1 Georgia,serif;opacity:.08;pointer-events:none;z-index:-1}
 .about-next-links{display:flex;gap:34px;flex-wrap:wrap;margin-top:30px}
 .about-next-links a{display:inline-flex;gap:25px;padding-bottom:9px;border-bottom:1px solid;font:11px var(--mono)}
 .about-next-links a span{color:#4d63ff}
@@ -204,4 +203,35 @@
  .about-motto{gap:10px;margin-top:48px;padding-top:23px}
  .about-motto p{font-size:9px;letter-spacing:.045em}
  .motto-symbol{font-size:38px}
+}
+
+
+/* Stronger, more visible tattoo linework and a true closing signature */
+.about-next:before,.about-next:after{content:none!important;display:none!important}
+.about-next{padding-bottom:0!important}
+.about-next-links{margin-bottom:75px}
+.about-signature{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(20px,5vw,75px);margin:0 -9vw;padding:75px 9vw 62px;background:#171717;color:#f5f1e9;min-height:310px}
+.signature-words{display:flex;flex-direction:column;align-items:center;line-height:.83;letter-spacing:-.09em;position:relative;z-index:1}
+.signature-words span{font:clamp(16px,2.3vw,27px) var(--mono);letter-spacing:.2em}
+.signature-words strong{font-size:clamp(65px,11vw,145px);font-weight:800;color:#d7ff36;letter-spacing:-.105em;margin:10px 0 12px}
+.signature-sun,.signature-moon{width:clamp(95px,13vw,165px);height:auto;overflow:visible;fill:none;stroke:#ff5e8a;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;position:relative;z-index:1}
+.signature-sun{justify-self:end;stroke:#d7ff36}
+.signature-moon{justify-self:start;transform:rotate(-12deg)}
+.signature-caption{position:absolute;left:0;right:0;bottom:22px;text-align:center;font:9px var(--mono);letter-spacing:.22em;color:#aaa}
+.tattoo-mark{opacity:.27!important}
+.tattoo-phoenix-mark{width:clamp(185px,25vw,320px);height:clamp(190px,26vw,330px);right:4%;top:18%;opacity:.2!important}
+.about-method .tattoo-scorpion-mark{width:clamp(135px,18vw,220px);height:clamp(165px,22vw,270px);right:5%;top:9%;opacity:.28!important}
+.about-toolbox .tattoo-koi-mark{width:clamp(220px,30vw,370px);height:clamp(145px,20vw,245px);right:2%;top:3%;opacity:.24!important}
+.tattoo-mark svg{stroke-width:1.05}
+@media(max-width:700px){
+ .about-next{padding-bottom:0!important}
+ .about-next-links{margin-bottom:50px}
+ .about-signature{grid-template-columns:48px 1fr 48px;gap:10px;margin:0 -6vw;padding:55px 6vw 55px;min-height:230px}
+ .signature-sun,.signature-moon{width:48px}
+ .signature-words span{font-size:10px;letter-spacing:.13em}
+ .signature-words strong{font-size:clamp(42px,12vw,70px);margin:8px 0}
+ .signature-caption{font-size:7px;bottom:17px;letter-spacing:.12em}
+ .tattoo-phoenix-mark{width:145px;height:155px;right:-8px;top:23%;opacity:.15!important}
+ .about-method .tattoo-scorpion-mark{width:105px;height:135px;right:-8px;top:8%;opacity:.2!important}
+ .about-toolbox .tattoo-koi-mark{width:165px;height:110px;right:-12px;top:3%;opacity:.18!important}
 }
