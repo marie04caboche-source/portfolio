@@ -1509,7 +1509,7 @@ a.project-card:focus-visible .home-case-art:before{
 .project-signature-band{--signature-accent:#ff5e8a;--signature-secondary:#4d63ff;--signature-progress:0;position:relative;z-index:5;min-height:54px;margin:0 0 22px;padding:0 18px;display:grid;grid-template-columns:1fr 68px auto 1fr;align-items:center;gap:18px;overflow:hidden;border:1px solid currentColor;font:9px var(--mono);letter-spacing:.12em}
 .signature-band-label,.signature-band-index{position:relative;z-index:2}
 .signature-band-label i{font-style:normal;color:var(--signature-accent);padding:0 7px}
-.signature-monogram{position:relative;z-index:3;font:900 27px/1 var(--sans);letter-spacing:-.13em;color:var(--signature-accent);transition:color .35s,text-shadow .35s,transform .35s;transform:rotate(-7deg)}
+.signature-monogram{position:relative;z-index:3;font:900 27px/1 var(--sans);letter-spacing:-.13em;color:var(--signature-accent);filter:hue-rotate(var(--signature-hue,0deg));transition:color .35s,text-shadow .35s,transform .35s,filter .8s;transform:rotate(-7deg)}
 .signature-sun{position:absolute;left:50%;top:50%;width:31px;height:31px;transform:translate(-50%,-50%);border-radius:50%;background:var(--signature-accent);box-shadow:0 0 0 8px color-mix(in srgb,var(--signature-accent) 16%,transparent),0 0 28px color-mix(in srgb,var(--signature-accent) 48%,transparent);transition:background 1s,box-shadow 1s}
 .signature-sun:before,.signature-sun:after{content:"";position:absolute;inset:-12px;border:1px solid color-mix(in srgb,var(--signature-accent) 70%,transparent);border-radius:50%;transform:scale(calc(1 + var(--signature-progress)*.55));transition:transform .5s,border-color .8s}
 .signature-sun:after{inset:-21px;opacity:.45;transform:scale(calc(1.15 - var(--signature-progress)*.2))}
@@ -1538,7 +1538,7 @@ a.project-card:focus-visible .home-case-art:before{
 .creative-gallery[data-active="1"] .signature-monogram{color:#4d63ff;text-shadow:2px 2px 0 #ff5e8a}
 .creative-gallery[data-active="2"] .signature-monogram{color:#8aa900;text-shadow:2px 2px 0 #4d63ff}
 .tiam-world .project-signature-band{position:relative}
-.tiam-world .signature-monogram{color:color-mix(in srgb,var(--tiam-pink) calc(100% - var(--signature-progress)*55%),var(--tiam-blue))}
+.tiam-world .signature-monogram{color:var(--tiam-pink)}
 @media(max-width:700px){
  .project-signature-band{min-height:47px;margin-bottom:16px;padding:0 10px;grid-template-columns:1fr 38px auto;gap:8px;font-size:7px;letter-spacing:.07em}
  .project-signature-band .signature-band-index{display:none}
