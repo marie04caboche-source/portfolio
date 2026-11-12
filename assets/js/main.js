@@ -235,6 +235,50 @@
     closeCountry?.addEventListener("click", closeCountryGallery);
   }
 
+
+  // Média Orléans: la lumière et les compositions réagissent au mouvement et au scroll.
+  const mediaPage = document.querySelector(".media-orleans-world");
+  if (mediaPage && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const mediaHero = mediaPage.querySelector(".media-hero");
+    const mediaArt = mediaPage.querySelector(".media-hero-art");
+    let mediaFrame = null;
+    const updateMediaProgress = () => {
+      const rect = mediaPage.getBoundingClientRect();
+      const distance = Math.max(1, mediaPage.offsetHeight - window.innerHeight);
+      const progress = Math.min(1, Math.max(0, -rect.top / distance));
+      mediaPage.style.setProperty("--media-progress", progress.toFixed(3));
+    };
+    window.addEventListener("scroll", updateMediaProgress, {passive:true});
+    window.addEventListener("resize", updateMediaProgress);
+    updateMediaProgress();
+    if (mediaHero && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      mediaHero.addEventListener("pointermove", (event) => {
+        if (mediaFrame) cancelAnimationFrame(mediaFrame);
+        mediaFrame = requestAnimationFrame(() => {
+          const rect = mediaHero.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width) * 100;
+          const y = ((event.clientY - rect.top) / rect.height) * 100;
+          mediaPage.style.setProperty("--media-pointer-x", x.toFixed(1) + "%");
+          mediaPage.style.setProperty("--media-pointer-y", y.toFixed(1) + "%");
+          if (mediaArt) {
+            const tiltX = (event.clientX - rect.left) / rect.width - .5;
+            const tiltY = (event.clientY - rect.top) / rect.height - .5;
+            mediaArt.style.setProperty("--media-tilt-x", (tiltX * 5).toFixed(2) + "deg");
+            mediaArt.style.setProperty("--media-tilt-y", (tiltY * -5).toFixed(2) + "deg");
+          }
+        });
+      });
+      mediaHero.addEventListener("pointerleave", () => {
+        mediaPage.style.setProperty("--media-pointer-x", "50%");
+        mediaPage.style.setProperty("--media-pointer-y", "45%");
+        if (mediaArt) {
+          mediaArt.style.setProperty("--media-tilt-x", "0deg");
+          mediaArt.style.setProperty("--media-tilt-y", "0deg");
+        }
+      });
+    }
+  }
+
 })();
 
 
