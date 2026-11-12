@@ -59,4 +59,34 @@
     });
   }
 
+
+  // Assises: the sun follows the reading progress and progressively powers the solar panels.
+  const energyPage = document.querySelector(".assises-world");
+  if (energyPage && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const panels = [...energyPage.querySelectorAll(".solar-panel i")];
+    const headings = [...energyPage.querySelectorAll(".detail-body h2")];
+    let ticking = false;
+    const updateEnergyScene = () => {
+      const rect = energyPage.getBoundingClientRect();
+      const scrollable = Math.max(1, energyPage.offsetHeight - window.innerHeight);
+      const progress = Math.min(1, Math.max(0, -rect.top / scrollable));
+      const x = 88 - Math.sin(progress * Math.PI) * 34;
+      const y = 4 + progress * 91;
+      energyPage.style.setProperty("--sun-x", x.toFixed(2) + "%");
+      energyPage.style.setProperty("--sun-y", y.toFixed(2) + "%");
+      const light = Math.max(0, Math.min(1, (progress - .48) / .34));
+      energyPage.style.setProperty("--daylight", light.toFixed(2));
+      const litCount = Math.round(light * panels.length);
+      panels.forEach((panel,index) => panel.classList.toggle("is-lit", index < litCount));
+      headings.forEach((heading,index) => heading.classList.toggle("is-lit", progress > Math.min(.95, .18 + index * .19)));
+      ticking = false;
+    };
+    const onScroll = () => {
+      if (!ticking) { window.requestAnimationFrame(updateEnergyScene); ticking = true; }
+    };
+    window.addEventListener("scroll", onScroll, {passive:true});
+    window.addEventListener("resize", onScroll);
+    updateEnergyScene();
+  }
+
 })();
