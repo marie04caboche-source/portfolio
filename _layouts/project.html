@@ -3,6 +3,13 @@ layout: default
 ---
 {% if page.title contains "Assises" %}
 <main class="project-detail project-assises assises-world">
+  <div class="energy-scene" aria-hidden="true">
+    <svg class="energy-path" viewBox="0 0 1000 1000" preserveAspectRatio="none"><path d="M930 70 C760 150 810 300 900 390 S760 620 880 760 S760 900 900 980" /></svg>
+    <div class="energy-sun"><span></span></div>
+    <div class="energy-turbine"><span class="turbine-mast"></span><span class="turbine-hub"></span><span class="turbine-blades"><i></i><i></i><i></i></span></div>
+    <div class="energy-panels"><div class="solar-panel"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="solar-panel"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="solar-panel"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="energy-flow energy-flow-one"></div><div class="energy-flow energy-flow-two"></div>
+  </div>
   <div class="detail-top">
     <a href="{{ '/' | relative_url }}#projets">← RETOUR AUX PROJETS</a>
     <span>{{ page.category }} · {{ page.year }}</span>
