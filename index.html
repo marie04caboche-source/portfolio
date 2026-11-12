@@ -42,8 +42,17 @@ title: Accueil
           {% if project.cover and project.cover != "" %}
             <img src="{{ project.cover | relative_url }}" alt="{{ project.title | escape }}">
           {% else %}
-            <div class="visual-type"><small>{{ project.category }}</small><strong>{{ project.title }}</strong><span>↗</span></div>
-            <div class="visual-shape"></div>
+            {% if project.title contains "Assises" %}
+              <div class="home-case-art">
+                <div class="home-case-top"><span>DIJON · JUIN 2026</span><span>27e ÉDITION</span></div>
+                <div class="home-case-orbit"><i></i><b></b></div>
+                <div class="home-case-title">FAIRE<br><em>BOUGER</em><br>LES LIGNES<span>✳</span></div>
+                <div class="home-case-bottom"><span>TRANSITION ÉNERGÉTIQUE</span><span>3 JOURS · 1 ÉVÉNEMENT</span></div>
+              </div>
+            {% else %}
+              <div class="visual-type"><small>{{ project.category }}</small><strong>{{ project.title }}</strong><span>↗</span></div>
+              <div class="visual-shape"></div>
+            {% endif %}
           {% endif %}
           <span class="project-number">0{{ forloop.index }}</span>
         </div>
