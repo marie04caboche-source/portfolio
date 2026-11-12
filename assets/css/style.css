@@ -716,3 +716,227 @@ body:has(.assises-world) .nav-availability i{background:#b9df4c;box-shadow:0 0 0
 }
 @keyframes assises-line-in{from{width:0;opacity:0}to{width:95px;opacity:1}}
 @keyframes assises-orbit{to{transform:rotate(360deg)}}
+
+
+/* =========================================================
+   ASSISES — blue / green experimental graphic universe
+   Keeps the original project-page structure intact.
+   ========================================================= */
+body:has(.assises-world) {
+  --a-night: #062f35;
+  --a-blue: #075b70;
+  --a-cyan: #16b8b0;
+  --a-green: #72c94b;
+  --a-lime: #c8ee55;
+  --a-cream: #eff4e8;
+  background: var(--a-night);
+  color: var(--a-cream);
+}
+body:has(.assises-world) .site-nav {
+  background: rgba(6,47,53,.94);
+  color: var(--a-cream);
+  border-bottom: 1px solid rgba(239,244,232,.22);
+  backdrop-filter: blur(18px);
+}
+body:has(.assises-world) .brand span { color: var(--a-lime); }
+body:has(.assises-world) .site-nav nav a:hover { color: var(--a-lime); opacity: 1; }
+body:has(.assises-world) .nav-availability i { background: var(--a-lime); box-shadow: 0 0 0 4px #c8ee5522; }
+
+.assises-world {
+  --ink: var(--a-cream);
+  --line: rgba(239,244,232,.25);
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  padding: 34px 8vw 100px !important;
+  margin: 0;
+  color: var(--a-cream);
+  background:
+    radial-gradient(ellipse at 88% 14%, rgba(22,184,176,.25), transparent 30%),
+    radial-gradient(ellipse at 7% 56%, rgba(114,201,75,.13), transparent 34%),
+    linear-gradient(135deg, #062f35 0%, #074b59 48%, #06353e 100%);
+}
+.assises-world:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  opacity: .72;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 42px, rgba(200,238,85,.075) 43px 44px, transparent 45px 88px),
+    radial-gradient(circle at 18% 24%, transparent 0 62px, rgba(22,184,176,.22) 63px 64px, transparent 65px 92px, rgba(22,184,176,.12) 93px 94px, transparent 95px),
+    radial-gradient(circle at 91% 62%, transparent 0 95px, rgba(200,238,85,.2) 96px 97px, transparent 98px 132px, rgba(200,238,85,.12) 133px 134px, transparent 135px);
+  background-size: auto, 520px 520px, 680px 680px;
+  animation: assises-pattern-drift 38s linear infinite;
+}
+.assises-world:after {
+  content: "MOBILISATION GÉNÉRALE  /  AETE 2026";
+  position: absolute;
+  z-index: -1;
+  top: 390px;
+  right: -95px;
+  writing-mode: vertical-rl;
+  font: 10px var(--mono);
+  letter-spacing: .32em;
+  color: rgba(200,238,85,.42);
+  pointer-events: none;
+}
+.assises-world .detail-top {
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid var(--line);
+  padding: 0 0 18px;
+  color: var(--a-cream);
+}
+.assises-world .detail-top a,
+.assises-world .back-projects {
+  border-bottom: 1px solid rgba(200,238,85,.65);
+  padding-bottom: 7px;
+  color: var(--a-lime);
+}
+.assises-world .detail-top span { color: rgba(239,244,232,.68); }
+.assises-world .detail-hero {
+  position: relative;
+  padding: 70px 0 42px;
+}
+.assises-world .detail-hero:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: min(46vw, 620px);
+  aspect-ratio: 1;
+  right: -11vw;
+  top: 55px;
+  border: 1px solid rgba(22,184,176,.48);
+  border-radius: 50%;
+  box-shadow: 0 0 0 24px rgba(22,184,176,.07), 0 0 0 52px rgba(200,238,85,.055), 0 0 0 88px rgba(22,184,176,.04);
+  animation: assises-orbit-drift 26s linear infinite;
+  pointer-events: none;
+}
+.assises-world .detail-hero .eyebrow {
+  color: var(--a-lime);
+  letter-spacing: .2em;
+}
+.assises-world .detail-hero h1 {
+  max-width: 1120px;
+  position: relative;
+  z-index: 1;
+  color: var(--a-cream);
+  font-size: clamp(56px, 10.5vw, 142px);
+  line-height: .86;
+  letter-spacing: -.095em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  margin: 20px 0 42px;
+  text-shadow: 0 8px 42px rgba(0,0,0,.16);
+}
+.assises-world .detail-hero h1:after {
+  content: "";
+  display: block;
+  width: 145px;
+  height: 9px;
+  margin-top: 28px;
+  background: linear-gradient(90deg, var(--a-lime) 0 34%, var(--a-cyan) 34% 72%, var(--a-green) 72%);
+  box-shadow: 0 0 28px rgba(22,184,176,.28);
+}
+.assises-world .detail-cover {
+  display: block;
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  border: 1px solid rgba(239,244,232,.25);
+  box-shadow: 18px 18px 0 rgba(22,184,176,.15), -8px -8px 0 rgba(200,238,85,.12);
+  filter: saturate(1.08) contrast(1.04);
+}
+.assises-world .detail-summary {
+  position: relative;
+  max-width: 900px;
+  color: var(--a-cream);
+  font-size: clamp(21px, 3vw, 36px);
+  line-height: 1.32;
+  letter-spacing: -.045em;
+  margin: 48px 0;
+}
+.assises-world .detail-info {
+  position: relative;
+  border-color: var(--line);
+  background: linear-gradient(90deg, rgba(22,184,176,.09), rgba(114,201,75,.055));
+  padding: 25px 22px;
+  gap: 28px;
+}
+.assises-world .detail-info>div { position: relative; }
+.assises-world .detail-info>div+div { border-left: 1px solid var(--line); padding-left: 28px; }
+.assises-world .detail-info small { color: var(--a-lime); letter-spacing: .15em; }
+.assises-world .detail-info p { color: var(--a-cream); line-height: 1.65; }
+.assises-world .detail-body {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 70px auto 85px;
+  color: var(--a-cream);
+  font-size: 17px;
+  line-height: 1.85;
+}
+.assises-world .detail-body h2 {
+  position: relative;
+  color: var(--a-lime);
+  font-size: clamp(37px, 5.6vw, 72px);
+  line-height: .96;
+  letter-spacing: -.075em;
+  text-transform: uppercase;
+  margin: 72px 0 22px;
+  padding: 20px 0 20px 34px;
+  border-left: 4px solid var(--a-cyan);
+  background: linear-gradient(90deg, rgba(22,184,176,.12), transparent 76%);
+}
+.assises-world .detail-body h2:before {
+  content: "✳";
+  position: absolute;
+  left: -19px;
+  top: -17px;
+  color: var(--a-green);
+  font-size: 24px;
+  text-shadow: 0 0 18px rgba(114,201,75,.55);
+}
+.assises-world .detail-body h3 {
+  display: inline-block;
+  color: var(--a-cyan);
+  font-size: 21px;
+  letter-spacing: -.035em;
+  margin: 34px 0 8px;
+  text-transform: uppercase;
+}
+.assises-world .detail-body p,
+.assises-world .detail-body li { color: rgba(239,244,232,.9); }
+.assises-world .detail-body ul { padding-left: 22px; }
+.assises-world .detail-body li { padding-left: 7px; margin: 10px 0; }
+.assises-world .detail-body li::marker { color: var(--a-lime); }
+.assises-world .back-projects {
+  position: relative;
+  z-index: 2;
+  color: var(--a-lime);
+  margin-top: 10px;
+}
+.assises-world a { transition: color .25s, opacity .25s, transform .25s; }
+.assises-world a:hover { color: var(--a-cyan); }
+@keyframes assises-pattern-drift {
+  from { background-position: 0 0, 0 0, 0 0; }
+  to { background-position: 180px 180px, 130px -100px, -120px 150px; }
+}
+@keyframes assises-orbit-drift { to { transform: rotate(360deg); } }
+@media(max-width:700px) {
+  .assises-world { padding: 25px 6vw 75px !important; }
+  .assises-world:after { right: -42px; top: 340px; font-size: 8px; }
+  .assises-world .detail-hero { padding: 52px 0 28px; }
+  .assises-world .detail-hero h1 { font-size: clamp(48px, 13vw, 82px); }
+  .assises-world .detail-hero:before { width: 75vw; right: -25vw; top: 35px; }
+  .assises-world .detail-summary { font-size: 21px; margin: 32px 0; }
+  .assises-world .detail-info { grid-template-columns: 1fr; padding: 18px; }
+  .assises-world .detail-info>div+div { border-left: 0; border-top: 1px solid var(--line); padding: 18px 0 0; }
+  .assises-world .detail-body { margin: 48px auto 60px; font-size: 15px; }
+  .assises-world .detail-body h2 { font-size: clamp(34px, 10vw, 52px); padding-left: 22px; margin-top: 52px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .assises-world:before, .assises-world .detail-hero:before { animation: none !important; }
+}
