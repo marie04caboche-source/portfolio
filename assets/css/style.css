@@ -2272,7 +2272,7 @@ a.project-card:focus-visible .home-case-art:before{
 .media-hero-copy{transform:translateY(calc(var(--media-progress) * -12px))}
 .media-hero h1{position:relative;text-shadow:5px 5px 0 #3548ff24}
 .media-hero h1 em{color:var(--media-paper);text-shadow:4px 4px 0 var(--media-blue)}
-.media-hero-art{transform:rotate(calc(var(--media-progress) * 2deg))}
+.media-hero-art{transform:perspective(1000px) rotateX(var(--media-tilt-y,0deg)) rotateY(var(--media-tilt-x,0deg)) rotate(calc(var(--media-progress) * 2deg));transition:transform .35s ease-out}
 .media-frame{box-shadow:12px 15px 0 #17151b30,0 28px 55px #17151b20}
 .media-frame-back{background:var(--media-blue);color:#fff;outline:1px solid #fff8}
 .media-frame-front{background:var(--media-ink);color:var(--media-yellow);border:8px solid var(--media-paper)}
