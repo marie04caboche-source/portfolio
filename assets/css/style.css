@@ -292,3 +292,88 @@
 /* Keep the paired sun/moon layer floating behind the section content. */
 .about-method > .tattoo-pair{position:absolute!important;z-index:1!important}
 .about-method > :not(.tattoo-art):not(.tattoo-pair){position:relative;z-index:2}
+
+
+/* Retour à la version sobre validée : aucun tatouage ni motif ajouté */
+.tattoo-art,
+.tattoo-pair,
+.tattoo-mark,
+.tattoo-watermark {
+  display: none !important;
+}
+.about-hero:before,
+.about-hero:after,
+.about-intro:before,
+.about-intro:after,
+.about-method:before,
+.about-method:after,
+.about-toolbox:before,
+.about-toolbox:after,
+.about-path:before,
+.about-path:after,
+.about-next:before,
+.about-next:after {
+  content: none !important;
+  display: none !important;
+}
+.about-signature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin: 0 -9vw;
+  padding: 76px 9vw 68px;
+  min-height: 330px;
+  background: #171717;
+  color: #f5f1e9;
+}
+.signature-pre,
+.signature-caption {
+  font: 10px var(--mono);
+  letter-spacing: .24em;
+  color: #aaa;
+  text-align: center;
+}
+.signature-words {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: .78;
+  letter-spacing: -.09em;
+  font-family: var(--sans, Manrope), sans-serif;
+}
+.signature-words span {
+  font: clamp(17px, 2.4vw, 28px) var(--mono);
+  letter-spacing: .22em;
+}
+.signature-words strong {
+  font-family: var(--sans, Manrope), sans-serif;
+  font-style: normal;
+  font-size: clamp(82px, 14vw, 178px);
+  font-weight: 800;
+  color: #d7ff36;
+  letter-spacing: -.11em;
+  margin: 14px 0 17px;
+}
+@media(max-width:700px) {
+  .about-signature {
+    margin: 0 -6vw;
+    padding: 60px 6vw 54px;
+    min-height: 245px;
+    gap: 18px;
+  }
+  .signature-words span {
+    font-size: 12px;
+    letter-spacing: .16em;
+  }
+  .signature-words strong {
+    font-size: clamp(58px, 17vw, 94px);
+    margin: 11px 0 13px;
+  }
+  .signature-pre,
+  .signature-caption {
+    font-size: 8px;
+    letter-spacing: .15em;
+  }
+}
