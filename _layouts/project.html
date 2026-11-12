@@ -8,6 +8,21 @@ layout: default
     <h1>{{ page.title }}</h1>
     {% if page.cover %}<img class="detail-cover" src="{{ page.cover | relative_url }}" alt="{{ page.title | escape }}">{% endif %}
     <p class="detail-summary">{{ page.summary }}</p>
+    {% if page.title contains "Assises" %}
+    <div class="case-visual" aria-label="Repères clés du projet">
+      <div class="case-visual-top"><span>DIJON · JUIN 2026</span><span>PROJET 01 / 01</span></div>
+      <div class="case-visual-main">
+        <div class="case-orbit"><span>ÉNERGIE<br>EN MOUVEMENT</span><i></i><b></b></div>
+        <div class="case-visual-title">FAIRE<br><em>BOUGER</em><br>LES LIGNES<span>✳</span></div>
+      </div>
+      <div class="case-visual-bottom"><span>27<sup>e</sup> ÉDITION</span><span>TRANSITION ÉNERGÉTIQUE</span><span>3 JOURS</span></div>
+    </div>
+    <div class="case-stats">
+      <div><strong>27<sup>e</sup></strong><span>ÉDITION</span></div>
+      <div><strong>03</strong><span>JOURS D’ÉVÉNEMENT</span></div>
+      <div><strong>~95<small>%</small></strong><span>DES VISUELS CRÉÉS PAR L’ÉQUIPE</span></div>
+    </div>
+    {% endif %}
   </section>
   <section class="detail-info">
     <div><small>MON RÔLE</small><p>{{ page.role }}</p></div>
