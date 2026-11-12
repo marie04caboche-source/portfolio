@@ -1715,3 +1715,92 @@ a.project-card:focus-visible .home-case-art:before{
 @media(prefers-reduced-motion:reduce){
   .tiam-ball,.tiam-edition-ball,.tiam-worldwide-orbit,.tiam-footer-court,.tiam-international-track,.tiam-hero:after,.tiam-worldwide:after{animation:none!important}
 }
+
+
+/* Shared project signature — same composition, theme-specific palette */
+.project-signature-band{
+  --signature-accent:#b9df4c;
+  --signature-secondary:#35c4b8;
+  --signature-progress:0;
+  position:relative;z-index:8;
+  min-height:68px;margin:0;padding:12px clamp(20px,5vw,76px);
+  display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,2.5vw,36px);
+  overflow:hidden;border:0;border-bottom:1px solid #ffffff45;
+  font:10px var(--mono);letter-spacing:.13em;
+  background:linear-gradient(105deg,#102f2c 0%,#0b3e3a 56%,#123f46 100%);
+  color:#f4f4e9;
+  isolation:isolate;
+}
+.project-signature-band:before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.28;
+  background:repeating-linear-gradient(115deg,transparent 0 30px,#ffffff22 31px,transparent 32px 62px);
+  transform:translateX(calc(var(--signature-progress)*-35px));
+}
+.signature-band-label,.signature-band-index{position:relative;z-index:2;white-space:nowrap}
+.signature-band-label i{font-style:normal;color:var(--signature-accent);padding:0 8px}
+.signature-monogram{
+  position:relative;z-index:3;flex:0 0 auto;
+  font:950 clamp(25px,3vw,34px)/.85 var(--sans);letter-spacing:-.15em;
+  color:var(--signature-accent);filter:hue-rotate(var(--signature-hue,0deg));
+  text-shadow:2px 2px 0 var(--signature-secondary);
+  transform:rotate(-7deg);transition:color .5s,text-shadow .5s,transform .5s,filter .8s;
+}
+.project-signature-band:hover .signature-monogram{transform:rotate(5deg) scale(1.12)}
+.signature-sun{
+  position:relative;z-index:2;flex:0 0 27px;width:27px;height:27px;
+  margin-left:-20px;margin-right:auto;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff 0 5%,var(--signature-accent) 28%,var(--signature-secondary) 100%);
+  box-shadow:0 0 0 7px color-mix(in srgb,var(--signature-accent) 20%,transparent),
+    0 0 24px color-mix(in srgb,var(--signature-accent) 55%,transparent);
+  transform:scale(calc(1 + var(--signature-progress)*.22));
+  transition:box-shadow .8s,filter .8s,transform .5s;
+  animation:signature-sun-pulse 4s ease-in-out infinite alternate;
+}
+.signature-sun:before,.signature-sun:after{
+  content:"";position:absolute;inset:-9px;border:1px solid color-mix(in srgb,var(--signature-accent) 75%,transparent);
+  border-radius:50%;transform:scale(calc(1 + var(--signature-progress)*.35));
+}
+.signature-sun:after{inset:-16px;opacity:.45;border-color:color-mix(in srgb,var(--signature-secondary) 70%,transparent)}
+.signature-band-index{margin-left:auto;text-align:right;color:#e4edca}
+.signature-gallery{
+  --signature-accent:#ff5e8a;--signature-secondary:#5368ff;
+  background:linear-gradient(105deg,#17142d 0%,#30204a 52%,#182e55 100%);
+}
+.signature-tiam{
+  --signature-accent:#d7ff38;--signature-secondary:#ff477e;
+  background:linear-gradient(105deg,#101321 0%,#242044 52%,#173c52 100%);
+}
+.signature-gallery .signature-band-label i{color:var(--signature-accent)}
+.signature-tiam .signature-band-label i{color:var(--signature-accent)}
+@keyframes signature-sun-pulse{
+  from{filter:saturate(1);scale:1}
+  to{filter:saturate(1.35) brightness(1.12);scale:1.12}
+}
+@media(max-width:700px){
+  .project-signature-band{min-height:58px;padding:10px 5vw;gap:12px;font-size:7px;letter-spacing:.07em}
+  .signature-band-label{max-width:42%;overflow:hidden;text-overflow:ellipsis}
+  .signature-monogram{font-size:25px}
+  .signature-sun{flex-basis:21px;width:21px;height:21px;margin-left:-9px}
+  .signature-band-index{font-size:6px;max-width:30%;white-space:normal;line-height:1.35}
+}
+@media(prefers-reduced-motion:reduce){
+  .signature-sun{animation:none!important}
+  .project-signature-band:before{transform:none}
+}
+
+/* TIAM identity: make the acronym and organizing club clear in the first screen */
+.tiam-full-name{
+  margin:0 0 8px;
+  font:900 clamp(12px,1.5vw,19px)/1.15 var(--sans);
+  letter-spacing:.04em;color:var(--tiam-acid);
+}
+.tiam-full-name strong{color:#fff}
+.tiam-organizer{
+  margin:0 0 22px;
+  font:9px/1.5 var(--mono);letter-spacing:.12em;color:#c9c6dc;
+}
+.tiam-organizer b{color:var(--tiam-pink);font-weight:900}
+@media(max-width:760px){
+  .tiam-full-name{font-size:12px;max-width:300px}
+  .tiam-organizer{font-size:7px;max-width:290px;margin-bottom:20px}
+}
