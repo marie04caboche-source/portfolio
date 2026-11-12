@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
-<body>
+<body class="{% if page.title contains 'Média Orléans' %}theme-media{% elsif page.title contains 'TIAM' %}theme-tiam{% elsif page.title contains 'CROUS' or page.title contains 'Faire vivre la résidence' %}theme-crous{% elsif page.title contains 'Explorations' %}theme-explorations{% endif %}">
   <div class="cursor-dot"></div>
   <header class="site-nav">
     <a class="brand" href="{{ '/' | relative_url }}">MC<span>✳</span></a>
