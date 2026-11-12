@@ -1500,3 +1500,6 @@ a.project-card:focus-visible .home-case-art:before{
   .project-card .home-case-art .home-case-orbit{width:38%;right:5%;top:25%}
   .project-card .home-case-art .home-case-orbit span{width:36px;height:36px;font-size:19px}
 }
+
+/* Explorations gallery — remove the floating spherical orb */
+.creative-gallery .atmo-orb{display:none!important}
