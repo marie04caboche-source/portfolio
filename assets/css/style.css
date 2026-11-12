@@ -1259,3 +1259,31 @@ a.project-card:hover .home-case-art:before,
 a.project-card:focus-visible .home-case-art:before{
   transform:scale(1.16) rotate(18deg);
 }
+
+
+/* Creative Studio atmosphere — animated layers behind the gallery */
+.creative-gallery{--atmo-a:#4d63ff;--atmo-b:#ff5e8a;--atmo-c:#d7ff36;--pointer-x:0;--pointer-y:0;--gallery-hue:0}
+.creative-gallery:before,.creative-gallery:after{transition:background 1.1s ease,box-shadow 1.1s ease,border-color 1.1s ease}
+.creative-gallery:before{border-color:color-mix(in srgb,var(--atmo-a) 34%,transparent);box-shadow:0 0 0 28px color-mix(in srgb,var(--atmo-a) 8%,transparent),0 0 0 66px color-mix(in srgb,var(--atmo-b) 9%,transparent),0 0 0 112px color-mix(in srgb,var(--atmo-a) 7%,transparent)}
+.creative-gallery:after{background:linear-gradient(135deg,color-mix(in srgb,var(--atmo-c) 48%,transparent),color-mix(in srgb,var(--atmo-b) 36%,transparent) 52%,color-mix(in srgb,var(--atmo-a) 38%,transparent))}
+.creative-atmosphere{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;perspective:900px}
+.atmo-shape{position:absolute;display:block;will-change:transform;transition:background 1s ease,border-color 1s ease,box-shadow 1s ease;transform-style:preserve-3d}
+.atmo-ring{width:clamp(180px,27vw,390px);aspect-ratio:1;left:5%;top:27%;border:1px solid color-mix(in srgb,var(--atmo-a) 65%,transparent);border-radius:50%;box-shadow:0 0 0 18px color-mix(in srgb,var(--atmo-a) 8%,transparent),0 0 0 46px color-mix(in srgb,var(--atmo-b) 8%,transparent);animation:atmo-float-a 19s ease-in-out infinite alternate,atmo-spin 46s linear infinite}
+.atmo-orb{width:clamp(65px,10vw,145px);aspect-ratio:1;right:13%;top:17%;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff 0 2%,var(--atmo-c) 15%,var(--atmo-b) 58%,color-mix(in srgb,var(--atmo-a) 75%,transparent) 100%);box-shadow:inset -16px -18px 30px #17171730,0 15px 65px color-mix(in srgb,var(--atmo-b) 30%,transparent);animation:atmo-float-b 13s ease-in-out infinite alternate}
+.atmo-ribbon{width:clamp(220px,35vw,510px);height:clamp(22px,4vw,55px);right:-7%;bottom:18%;border:1px solid color-mix(in srgb,var(--atmo-a) 50%,transparent);background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--atmo-b) 23%,transparent),color-mix(in srgb,var(--atmo-c) 25%,transparent),transparent);transform:rotate(-27deg);filter:blur(.2px);animation:atmo-ribbon 17s ease-in-out infinite alternate}
+.atmo-cross{font-size:clamp(55px,9vw,120px);right:7%;bottom:24%;line-height:1;color:var(--atmo-a);text-shadow:0 0 35px color-mix(in srgb,var(--atmo-a) 30%,transparent);animation:atmo-float-a 15s ease-in-out infinite alternate-reverse,atmo-spin 34s linear infinite}
+.atmo-dots{width:clamp(110px,17vw,245px);height:clamp(110px,17vw,245px);left:12%;bottom:7%;opacity:.4;background-image:radial-gradient(var(--atmo-b) 1.4px,transparent 1.6px);background-size:12px 12px;mask-image:radial-gradient(circle,#000 20%,transparent 72%);animation:atmo-float-b 21s ease-in-out infinite alternate}
+.atmo-disc{width:clamp(100px,15vw,220px);aspect-ratio:1;left:47%;top:8%;border-radius:42% 58% 63% 37%;background:linear-gradient(145deg,color-mix(in srgb,var(--atmo-c) 65%,transparent),color-mix(in srgb,var(--atmo-a) 28%,transparent));filter:blur(1px);opacity:.6;animation:atmo-morph 18s ease-in-out infinite alternate}
+.creative-gallery-head,.creative-gallery-intro,.creative-carousel,.creative-gallery-footer{position:relative;z-index:1}
+.creative-gallery-texture{z-index:0}
+.creative-gallery-intro,.creative-gallery-head,.creative-gallery-footer{pointer-events:auto}
+.creative-gallery[data-active="1"]{--atmo-a:#ff5e8a;--atmo-b:#d7ff36;--atmo-c:#4d63ff}
+.creative-gallery[data-active="2"]{--atmo-a:#d7ff36;--atmo-b:#4d63ff;--atmo-c:#ff5e8a}
+.creative-gallery[data-active="0"]{--atmo-a:#4d63ff;--atmo-b:#ff5e8a;--atmo-c:#d7ff36}
+@keyframes atmo-float-a{0%{translate:0 0}50%{translate:22px -18px}100%{translate:-12px 24px}}
+@keyframes atmo-float-b{0%{translate:0 0;scale:1}100%{translate:-26px 30px;scale:1.08}}
+@keyframes atmo-spin{to{rotate:360deg}}
+@keyframes atmo-ribbon{0%{translate:0 0;rotate:-5deg}100%{translate:-35px 20px;rotate:5deg}}
+@keyframes atmo-morph{0%{border-radius:42% 58% 63% 37%;rotate:-18deg;scale:1}100%{border-radius:66% 34% 39% 61%;rotate:18deg;scale:1.16}}
+@media(max-width:700px){.atmo-ring{left:-19%;top:28%}.atmo-orb{right:2%;top:16%}.atmo-ribbon{right:-25%;bottom:16%}.atmo-cross{right:2%;bottom:17%}.atmo-dots{left:-8%;bottom:5%}.atmo-disc{left:38%;top:9%}}
+@media(prefers-reduced-motion:reduce){.atmo-shape{animation:none!important;transition:none!important}}
