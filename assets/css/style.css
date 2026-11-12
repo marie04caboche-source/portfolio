@@ -156,3 +156,5 @@
  .about-path .tattoo-phoenix-path{width:130px;height:160px;right:-25px;top:7%;opacity:.1}
  .about-next-links{gap:20px;flex-direction:column;align-items:flex-start}
 }
+
+.about-intro .tattoo-moon:before{content:"☾";position:absolute;inset:0;display:block;font:inherit;line-height:1;color:currentColor}
