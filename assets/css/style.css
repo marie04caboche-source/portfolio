@@ -999,3 +999,57 @@ body:has(.assises-world) .nav-availability i { background: var(--a-lime); box-sh
   .home-case-orbit{width:34%;right:5%;top:24%}
   .home-case-orbit span{width:34px;height:34px;font-size:18px}
 }
+
+
+/* Assises thumbnail: half-orbit + arrow, animated like the other project cards */
+.home-case-orbit{
+  position:absolute;
+  width:36%;
+  aspect-ratio:1;
+  right:8%;
+  top:24%;
+  border:1px solid rgba(255,255,255,.82);
+  border-bottom-color:transparent;
+  border-left-color:rgba(255,255,255,.4);
+  border-radius:50%;
+  transform:rotate(-35deg);
+  z-index:1;
+  transition:transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.home-case-orbit:before{
+  content:"";
+  position:absolute;
+  inset:13%;
+  border:1px solid rgba(255,255,255,.48);
+  border-radius:50%;
+  border-top-color:transparent;
+  transform:rotate(48deg);
+}
+.home-case-orbit span{
+  position:absolute;
+  right:-13px;
+  bottom:10%;
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--acid);
+  color:var(--ink);
+  border:1px solid var(--ink);
+  font-size:23px;
+  transform:rotate(35deg);
+  transition:transform .35s ease,background .35s ease,color .35s ease;
+}
+.project-card:hover .home-case-orbit{
+  transform:scale(1.2) rotate(20deg);
+}
+.project-card:hover .home-case-orbit span{
+  transform:translate(5px,-5px) rotate(25deg);
+  background:var(--pink);
+  color:var(--ink);
+}
+@media(max-width:700px){
+  .home-case-orbit{width:38%;right:5%;top:25%}
+  .home-case-orbit span{width:36px;height:36px;font-size:19px}
+}
