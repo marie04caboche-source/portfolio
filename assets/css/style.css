@@ -129,3 +129,30 @@
  .about-method h2{padding:60px 0 40px}.method-grid{grid-template-columns:1fr 1fr}.method-grid article{padding:20px 12px 15px 0}.method-grid article+article{padding-left:12px}.method-grid article:nth-child(2){border-right:0}.method-grid article:nth-child(3){padding-left:0;border-top:1px solid #ffffff44}.method-grid article:nth-child(4){border-top:1px solid #ffffff44}.method-grid h3{margin:25px 0 8px;font-size:16px}
  .toolbox-heading{display:block;padding:60px 0 35px}.toolbox-heading>p{margin-top:25px}.toolbox-tags{gap:7px}.toolbox-tags span{font-size:8px;padding:11px 12px}.toolbox-software{grid-template-columns:1fr;gap:5px;margin-top:45px}.about-path h2{padding:60px 0}.about-timeline>div{grid-template-columns:1fr 1fr;gap:8px}.about-timeline>div p{grid-column:2}.about-next h2{font-size:clamp(60px,15vw,100px);padding:55px 0 25px}.about-back{padding:18px 6vw;font-size:8px;gap:15px}
 }
+
+
+/* Tattoo-inspired details — subtle, personal, never competing with the text */
+.about-hero,.about-intro,.about-method,.about-toolbox,.about-path,.about-next{position:relative;isolation:isolate;overflow:hidden}
+.tattoo-watermark{position:absolute;z-index:-1;pointer-events:none;display:block;color:currentColor;opacity:.13;font-family:Georgia,serif;font-weight:400;line-height:1;user-select:none}
+.tattoo-phoenix{width:clamp(190px,28vw,390px);height:clamp(210px,30vw,420px);right:3%;top:17%;opacity:.13;background-repeat:no-repeat;background-position:center;background-size:contain;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 260' fill='none' stroke='%23171717' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M120 239C91 207 48 190 39 145 33 113 50 83 70 59 61 96 81 119 100 132 83 92 100 47 128 17 121 66 145 91 163 105 160 75 184 48 207 35 190 78 210 108 198 146 188 188 152 220 120 239Z'/%3E%3Cpath d='M118 226C98 192 103 155 125 123 144 155 143 191 118 226ZM82 185C58 166 50 140 57 111M158 185C183 163 190 137 183 108M127 93C112 68 111 46 128 20M140 116C164 103 178 84 177 61'/%3E%3C/svg%3E")}
+.about-intro .tattoo-sun{width:clamp(110px,16vw,205px);height:auto;aspect-ratio:1;right:5%;top:10%;opacity:.16;background:radial-gradient(circle,transparent 28%,currentColor 29%,currentColor 29.6%,transparent 30%);border-radius:50%}
+.about-intro .tattoo-sun:before{content:"";position:absolute;inset:0;border:1px solid currentColor;border-radius:50%;box-shadow:0 0 0 12px transparent}
+.about-intro .tattoo-sun:after{content:"";position:absolute;inset:-16%;background:repeating-conic-gradient(from 0deg,currentColor 0deg 1deg,transparent 1deg 30deg);mask:radial-gradient(circle,transparent 0 46%,#000 47% 49%,transparent 50%)}
+.about-intro .tattoo-moon{width:clamp(85px,12vw,150px);height:clamp(110px,16vw,190px);right:19%;bottom:8%;font-size:clamp(110px,15vw,190px);opacity:.12;transform:rotate(-13deg)}
+.about-method .tattoo-scorpion{width:clamp(125px,17vw,220px);height:clamp(145px,20vw,250px);right:5%;top:13%;opacity:.18;background-repeat:no-repeat;background-size:contain;background-position:center;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 210' fill='none' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M87 132C65 114 63 90 79 76 94 63 114 70 117 88 120 105 103 116 91 106 81 98 89 86 99 89M83 127L66 146 45 148 33 167M93 130L111 149 133 146 147 164M76 114L48 116 30 104M113 112L139 112 154 97M81 77L68 58 71 39M108 73L123 54 120 36M92 68C75 47 86 25 111 16 133 8 149 21 145 40 141 58 122 59 115 46M81 140L69 168 76 188M102 140L116 167 109 189'/%3E%3Ccircle cx='90' cy='93' r='3'/%3E%3C/svg%3E")}
+.about-toolbox .tattoo-koi{width:clamp(190px,27vw,350px);height:clamp(130px,18vw,230px);right:3%;top:6%;opacity:.14;background-repeat:no-repeat;background-size:contain;background-position:center;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 190' fill='none' stroke='%23171717' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M26 98C48 50 112 42 153 79 178 102 204 105 232 83 222 120 189 143 151 132 113 121 91 88 58 92 45 94 35 102 26 115ZM153 79L183 44 190 78M153 132L184 162 190 132M65 92Q84 112 108 115M104 66Q120 86 139 92M105 133Q125 111 143 109M232 83L245 69M232 83L247 96'/%3E%3Ccircle cx='54' cy='92' r='3'/%3E%3C/svg%3E")}
+.about-path .tattoo-phoenix-path{width:clamp(180px,24vw,310px);height:clamp(190px,26vw,340px);right:2%;top:12%;opacity:.12;transform:rotate(8deg)}
+.about-next{overflow:hidden}
+.about-next:after{content:"☼";position:absolute;right:5%;bottom:-20%;font:clamp(180px,32vw,430px)/1 Georgia,serif;opacity:.08;pointer-events:none;z-index:-1}
+.about-next-links{display:flex;gap:34px;flex-wrap:wrap;margin-top:30px}
+.about-next-links a{display:inline-flex;gap:25px;padding-bottom:9px;border-bottom:1px solid;font:11px var(--mono)}
+.about-next-links a span{color:#4d63ff}
+@media(max-width:700px){
+ .tattoo-phoenix{width:145px;height:175px;right:-15px;top:24%;opacity:.1}
+ .about-intro .tattoo-sun{right:-12px;top:4%;width:100px}
+ .about-intro .tattoo-moon{right:5%;bottom:4%;font-size:100px}
+ .about-method .tattoo-scorpion{width:105px;height:130px;right:-12px;top:7%;opacity:.13}
+ .about-toolbox .tattoo-koi{width:150px;height:110px;right:-15px;top:4%;opacity:.12}
+ .about-path .tattoo-phoenix-path{width:130px;height:160px;right:-25px;top:7%;opacity:.1}
+ .about-next-links{gap:20px;flex-direction:column;align-items:flex-start}
+}
