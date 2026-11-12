@@ -1,4 +1,6 @@
 (() => {
+  // The Assises page reveals its editorial elements as the visitor enters each chapter.
+  document.querySelectorAll(".assises-entry-grid, .assises-data-line, .assises-role-intro, .assises-content h2, .assises-content h3, .assises-content p, .assises-content li, .assises-outro-mark, .assises-outro-kicker, .assises-outro h2, .assises-outro > p, .assises-outro-bottom").forEach((item) => item.classList.add("reveal"));
   const items = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver((entries) => {
