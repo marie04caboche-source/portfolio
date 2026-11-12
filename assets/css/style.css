@@ -1804,3 +1804,13 @@ a.project-card:focus-visible .home-case-art:before{
   .tiam-full-name{font-size:12px;max-width:300px}
   .tiam-organizer{font-size:7px;max-width:290px;margin-bottom:20px}
 }
+
+/* Keep the MC monogram and its sun together as one signature lockup */
+.project-signature-band .signature-mark{display:inline-flex;align-items:center;gap:14px;flex:0 0 auto;position:relative;z-index:3;margin-right:auto}
+.project-signature-band .signature-monogram{margin:0}
+.project-signature-band .signature-sun{margin:0;flex:0 0 27px}
+.project-signature-band .signature-band-index{margin-left:auto}
+@media(max-width:700px){
+ .project-signature-band .signature-mark{gap:10px}
+ .project-signature-band .signature-sun{flex-basis:21px}
+}
