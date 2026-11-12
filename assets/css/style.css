@@ -288,3 +288,7 @@
 @media(prefers-reduced-motion:reduce){
  .tattoo-art,.tattoo-svg path,.tattoo-svg circle{transition:none!important}
 }
+
+/* Keep the paired sun/moon layer floating behind the section content. */
+.about-method > .tattoo-pair{position:absolute!important;z-index:1!important}
+.about-method > :not(.tattoo-art):not(.tattoo-pair){position:relative;z-index:2}
