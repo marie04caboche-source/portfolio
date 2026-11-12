@@ -115,6 +115,8 @@
     const prev = creativeCarousel.querySelector(".creative-arrow-prev");
     const next = creativeCarousel.querySelector(".creative-arrow-next");
     let active = 0;
+    const gallery = creativeCarousel.closest(".creative-gallery");
+    const atmosphere = gallery?.querySelector(".creative-atmosphere");
     const renderGallery = () => {
       slides.forEach((slide, index) => {
         slide.classList.remove("is-active", "is-before", "is-after");
@@ -125,6 +127,10 @@
       });
       if (counter) counter.textContent = String(active + 1).padStart(2, "0");
       if (progress) progress.style.width = ((active + 1) / slides.length * 100) + "%";
+      if (gallery) gallery.dataset.active = String(active % 3);
+      if (atmosphere) atmosphere.querySelectorAll(".atmo-shape").forEach((shape,index) => {
+        shape.style.filter = "hue-rotate(" + (active * 42 + index * 7) + "deg)";
+      });
     };
     const move = (direction) => { active = (active + direction + slides.length) % slides.length; renderGallery(); };
     prev?.addEventListener("click", () => move(-1));
@@ -145,6 +151,28 @@
       stage.addEventListener("pointerleave", () => {
         const art = stage.querySelector(".creative-slide.is-active .creative-art");
         if (art) art.style.transform = "";
+      });
+    }
+    if (gallery && atmosphere && window.matchMedia("(hover: hover) and (pointer: fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      let pointerFrame = null;
+      gallery.addEventListener("pointermove", (event) => {
+        if (pointerFrame) cancelAnimationFrame(pointerFrame);
+        pointerFrame = requestAnimationFrame(() => {
+          const rect = gallery.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width - .5;
+          const y = (event.clientY - rect.top) / rect.height - .5;
+          atmosphere.querySelectorAll(".atmo-shape").forEach((shape,index) => {
+            const depth = (index + 1) * 5;
+            shape.style.marginLeft = (x * depth) + "px";
+            shape.style.marginTop = (y * depth) + "px";
+          });
+        });
+      });
+      gallery.addEventListener("pointerleave", () => {
+        atmosphere.querySelectorAll(".atmo-shape").forEach(shape => {
+          shape.style.marginLeft = "";
+          shape.style.marginTop = "";
+        });
       });
     }
     renderGallery();
