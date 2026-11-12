@@ -27,14 +27,14 @@ J’ai intégré l’équipe organisatrice en appui à la préparation et au dé
 
 ### Imaginer et créer les supports
 
-- Réaliser près de 95 % des visuels produits par l’équipe pour l’événement.
+- Concevoir et décliner une grande partie des supports visuels de l’événement, en réponse aux besoins de l’équipe organisatrice.
 - Concevoir et adapter les supports graphiques aux différents besoins de communication.
 - Participer à la publication de contenus, notamment sur YouTube.
 
 ### Être sur le terrain
 
 - Accompagner l’organisation des visites de sites proposées aux congressistes.
-- Participer au suivi du label Éco-Manifestation, avec un objectif de niveau 3.
+- Contribuer au suivi de la démarche Éco-Manifestation, qui a permis à l’événement d’obtenir le niveau 3, le plus élevé.
 - Contribuer à la coordination des équipes et au bon déroulement des séquences sur place, jusqu’à la soirée de gala.
 
 ## Une expérience qui fait sens
@@ -45,4 +45,4 @@ J’ai particulièrement apprécié la diversité des missions et l’autonomie 
 
 ## En images
 
-Les supports de communication, les coulisses et les temps forts de l’événement viendront illustrer ce projet.
+Les supports de communication que j’ai réalisés, les coulisses et les temps forts de l’événement viendront illustrer ce projet.
