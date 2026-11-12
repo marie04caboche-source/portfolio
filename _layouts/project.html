@@ -30,11 +30,6 @@ layout: default
 {% elsif page.title contains "Explorations" %}
 <main class="creative-gallery-page">
   <section class="creative-gallery" aria-label="Galerie des explorations créatives">
-    <div class="project-signature-band signature-gallery" aria-label="Signature graphique du projet">
-      <span class="signature-band-label">CREATIVE STUDIO <i>✳</i> EXPERIMENTAL DESIGN</span>
-      <span class="signature-mark"><strong class="signature-monogram" aria-label="MC">MC</strong><span class="signature-sun" aria-hidden="true"><i></i></span></span>
-      <span class="signature-band-index">FORME · COULEUR · MOUVEMENT</span>
-    </div>
     <div class="creative-gallery-texture" aria-hidden="true"></div>
     <div class="creative-atmosphere" aria-hidden="true">
       <span class="atmo-shape atmo-ring"></span>
@@ -135,11 +130,6 @@ layout: default
 </main>
 {% elsif page.title contains "TIAM" %}
 <main class="tiam-world">
-  <div class="project-signature-band signature-tiam" aria-label="Signature graphique du projet">
-    <span class="signature-band-label">TIAM <i>✳</i> BASKETBALL CULTURE</span>
-    <span class="signature-mark"><strong class="signature-monogram" aria-label="MC">MC</strong><span class="signature-sun" aria-hidden="true"><i></i></span></span>
-    <span class="signature-band-index">18e / 19e ÉDITIONS</span>
-  </div>
   <div class="tiam-noise" aria-hidden="true"></div>
   <div class="tiam-orbit-lines" aria-hidden="true"><i></i><i></i><i></i></div>
   <header class="tiam-topbar">
@@ -187,12 +177,20 @@ layout: default
     </div>
     <div class="tiam-country-line" aria-label="Pays représentés">
       <span class="tiam-country-label">INTERNATIONAL LINE-UP</span>
-      <div class="tiam-country-list">
-        <span data-country="01">BÉNIN</span>
-        <span data-country="02">ESPAGNE</span>
-        <span data-country="03">POLOGNE</span>
-        <span data-country="04">BELGIQUE</span>
-        <span data-country="05">FRANCE</span>
+      <div class="tiam-country-list" aria-label="Choisir un pays pour découvrir ses équipes">
+        <button type="button" data-country="BÉNIN" aria-expanded="false">BÉNIN</button>
+        <button type="button" data-country="ESPAGNE" aria-expanded="false">ESPAGNE</button>
+        <button type="button" data-country="POLOGNE" aria-expanded="false">POLOGNE</button>
+        <button type="button" data-country="BELGIQUE" aria-expanded="false">BELGIQUE</button>
+        <button type="button" data-country="FRANCE" aria-expanded="false">FRANCE</button>
+      </div>
+      <div class="tiam-country-gallery" data-tiam-country-gallery hidden aria-live="polite">
+        <div class="tiam-country-gallery-head"><span>TEAM ARCHIVE / <b data-tiam-country-name></b></span><button type="button" data-tiam-country-close aria-label="Fermer">×</button></div>
+        <div class="tiam-team-photo-grid">
+          <div class="tiam-team-photo-placeholder">PHOTO ÉQUIPE<br>À INTÉGRER</div>
+          <div class="tiam-team-photo-placeholder">PHOTO ÉQUIPE<br>À INTÉGRER</div>
+          <div class="tiam-team-photo-placeholder">PHOTO ÉQUIPE<br>À INTÉGRER</div>
+        </div>
       </div>
       <span class="tiam-country-end">AND MORE ON THE COURT ↗</span>
     </div>
@@ -239,15 +237,6 @@ layout: default
     </div>
   </section>
 
-  <footer class="tiam-footer">
-    <div class="tiam-footer-top"><span>FINAL BUZZER / TIAM BASKETBALL</span><span>18e & 19e ÉDITIONS · KEEP THE GAME MOVING</span></div>
-    <div class="tiam-footer-lockup">
-      <strong class="tiam-footer-mc" aria-label="Marie Caboche">MC</strong>
-      <div class="tiam-footer-court" aria-hidden="true"><i></i><b></b></div>
-      <div class="tiam-footer-title"><span>VISUAL IDENTITY / SPORT & CULTURE</span><strong>THE GAME<br><em>GOES ON.</em></strong></div>
-      <a href="{{ '/' | relative_url }}#projets">RETOUR AUX PROJETS <b>↗</b></a>
-    </div>
-  </footer>
 </main>
 {% else %}
 <main class="project-detail">
